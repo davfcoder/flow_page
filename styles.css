@@ -1,0 +1,16 @@
+:root {
+    --bg-black: #1A1E26;
+    --color-primary: #7693A6;
+    --color-secondary: #D9A86C;
+    --color-tertiary: #85C1A5;
+    --color-contrast: #D0E5F2;
+}
+
+.carrusel {
+    background-color: var(--color-primary);
+
+}
+
+.span-bold {
+    font-weight: bold;
+}
