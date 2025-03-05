@@ -37,6 +37,7 @@ html {
 
 body {
   background-color: var(--bg-black);
+  font-family: Toroka Wide;
 }
 
 /* Navbar */
@@ -47,10 +48,9 @@ nav {
   padding: 1rem 2rem;
   width: 100%;
   height: 12rem;
-  font-family: "Toroka Wide";
 }
 
-nav .logo-container {
+nav .logo {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -71,7 +71,7 @@ nav .logo-container {
 
 .nav-links a {
   margin-left: 1rem;
-  color: var(--color-blanco);
+  color: var(--color-white);
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -97,19 +97,82 @@ nav .logo-container {
   transform: escale(1.1);
 }
 
-#galeria {
+.galeria-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.galeria-container {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   width: 80%;
 }
-#galeria img {
+
+.galeria-container img {
   width: 50%;
   transition: transform 0.3s;
   padding: 1rem;
-  border-radius: 5rem;
+  border-radius: 2rem;
+}
+
+.galeria-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 2rem 5%;
+}
+.galeria-container2 img{
+  width: 15%;
+  transition: transform 0.3s;
+  border-radius: 1.5rem;
+}
+
+.galeria-characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 2rem 5%;
+}
+.galeria-characters img{
+  width: 25%;
+  transition: transform 0.3s;
+  border-radius: 1.5rem;
 }
 
 #galeria img:hover {
   transform: scale(1.05);
+}
+
+/* LOADER CONTENT */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loader-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-content svg {
+  width: 50vh;
+  max-width: 30%;
 }
