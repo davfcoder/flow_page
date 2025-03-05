@@ -7,6 +7,24 @@
   --color-white: #f5f5f5;
 }
 
+@font-face {
+  font-family: 'Toroka Wide';
+  src: url('fonts/Toroka-WideLight.woff2') format('woff2'),
+    url('fonts/Toroka-WideLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Toroka Wide';
+  src: url('fonts/Toroka-WideRegular.woff2') format('woff2'),
+    url('fonts/Toroka-WideRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
