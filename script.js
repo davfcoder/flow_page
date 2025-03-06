@@ -1,25 +1,39 @@
 // Function to hide the loader and restore scrolling
 function hideLoader() {
-    const loader = document.getElementById('loader');
+  /* Se selecciona el elemento HTML con el ID loader. Este es el contenedor del loader que se mostrará mientras la página carga. */
+  const loader = document.getElementById("loader");
 
-    // Start fading out the loader
-    loader.style.opacity = '0';
+  /* Se reduce la opacidad del loader a 0, lo que inicia un efecto de desvanecimiento gradual. Este efecto depende de las propiedades CSS de transición (transition) definidas para el loader. */
+  loader.style.opacity = "0";
 
-    // Wait for the opacity transition to complete
-    setTimeout(function() {
-        // Hide the loader completely
-        loader.style.display = 'none';
+  /* Después de 500 milisegundos (la duración de la transición de opacidad), se ejecuta una función que:
+  - Oculta completamente el loader estableciendo display: none.
+  - Restaura el desplazamiento de la página estableciendo overflow: auto en el cuerpo del documento (document.body). Esto permite que el usuario pueda volver a desplazarse por la página. */
+  setTimeout(function () {
+    // Hide the loader completely
+    loader.style.display = "none";
 
-        // Restore scrolling after loader is hidden
-        document.body.style.overflow = 'auto';
-    }, 500); // Wait for the 500ms transition to finish
+    // Restore scrolling after loader is hidden
+    document.body.style.overflow = "auto";
+  }, 500); /* El tiempo de espera de 500 ms coincide con la duración de la transición de opacidad definida en CSS para el loader */
 }
 
 // Wait for the page to fully load
-window.onload = function() {
-    // Disable scrolling while loader is visible
-    document.body.style.overflow = 'hidden';
+window.onload = function () {
+    /* Al cargar la página, se deshabilita el desplazamiento estableciendo overflow: hidden en el cuerpo del documento. Esto asegura que el usuario no pueda interactuar con el contenido de la página mientras el loader está activo */
+  document.body.style.overflow = "hidden";
 
-    // Hide the loader after 3 seconds
-    setTimeout(hideLoader, 2000); // Initial delay (3000ms or 3 seconds)
+  /* Se programa la función hideLoader para que se ejecute después de 2 segundos (2000 ms). Este retraso simula una carga mínima, incluso si la página ya ha terminado de cargarse. */
+  setTimeout(hideLoader, 2000); // Initial delay (3000ms or 3 seconds)
 };
+
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav"); // Selecciona la navbar
+  /* Esta propiedad devuelve la cantidad de píxeles que el usuario ha desplazado verticalmente desde la parte superior de la página.
+    En este caso, estamos verificando si el usuario ha desplazado más de 50px. Si es así, aplicamos la clase .scrolled. */
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
