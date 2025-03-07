@@ -37,3 +37,18 @@ window.addEventListener("scroll", () => {
     nav.classList.remove("scrolled");
   }
 });
+
+// Function to show and close the popup (gallery images)
+var galeria = document.querySelectorAll('.galeria-container img');
+galeria.forEach(image => {
+  image.onclick = () => {
+    document.querySelector('.popup').style.display = 'flex';
+    document.querySelector('.popup img').src = image.src;
+  }
+});
+
+var close = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+close.onclick = function() { 
+  document.querySelector('.popup').style.display = "none";
+}

@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Flow Movie</title>
-    <link rel="icon" type="image/png" href="favicon/favicon.png">
+    <!-- Metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsive -->
+    <link rel="stylesheet" href="./styles.css"> <!-- Enlaza el archivo CSS para estilos -->
+    <title>Flow Movie</title> <!-- Define el título de la página -->
+    <link rel="icon" type="image/png" href="favicon/favicon.png"> <!-- Enlaza el favicon de la página -->
 </head>
 <body>
+  <!-- Contenedor para un cargador animado -->
   <div id="loader">
     <div class="loader-content">
+      <!-- Gráfico SVG para la animación del cargador -->
       <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.03 7.76">
         <defs>
           <style>
             .cls-1, .cls-2 {
-              stroke-width: 0px;
+              stroke-width: 0px; 
             }
             .cls-2 {
               fill: #fff;
             }
           </style>
         </defs>
+        <!-- Definición de las formas del SVG -->
         <path class="cls-2" d="m15.58,4.24c.06-.5.11-1,.23-1.48.36-1.45,1.31-2.33,2.79-2.55,1.23-.18,2.37.07,3.27.97,1.55,1.54,1.47,3.91.15,5.38-1.04,1.16-2.75,1.51-4.21.89-.83-.35-1.51-.89-2.02-1.63-.14-.2-.19-.31-.23-.61-.04-.32-.04-.65,0-.97Z"></path>
         <path class="cls-2" d="m6.69,6.52c-1.45,1.13-3.03,1.38-4.71.58C.75,6.52.17,5.45.03,4.14c-.07-.66-.04-1.31.28-1.94C.86,1.11,1.74.46,2.9.15c.2-.05.4-.08.6-.11.54-.07,1.09-.05,1.61.09,1.22.32,2.09,1.16,2.41,2.45.16.63.14,1.31.2,1.97.08.88-.4,1.48-1.04,1.97Z"></path>
         <path class="cls-1" d="m17.34,6.46c.66.65,1.58.57,2.17-.16.72-.88.9-1.9.86-2.99,0-.22-.1-.29-.33-.29-.46,0-.89-.37-.97-.78-.08-.4.05-.62.55-.87-.05-.07-.08-.13-.12-.18-.66-.7-1.69-.65-2.36.12-.7.81-.86,1.77-.77,2.79.07.88.32,1.71.98,2.35Z"></path>
@@ -29,76 +33,60 @@
     </div>
   </div>
   
-    <nav>
-        <div class="logo">
-            <img src="./assets/flow-logo.svg" alt="Flow Movie Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#carrusel">Carrusel</a></li>
-            <li><a href="#sinopsis">Sinopsis</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#form">Formulario</a></li>
-        </ul>
-    </nav>
-
-    <div id="carrusel" class="carrusel">
+  <!-- Barra de navegación -->
+  <nav>
+    <div class="logo">
+      <img src="./assets/flow-logo.svg" alt="Flow Movie Logo"> <!-- Muestra el logo -->
     </div>
+    <ul class="nav-links">
+      <li><a href="#carrusel">Carrusel</a></li> <!-- Enlace a la sección "Carrusel" -->
+      <li><a href="#sinopsis">Sinopsis</a></li> <!-- Enlace a la sección "Sinopsis" -->
+      <li><a href="#galeria">Galeria</a></li> <!-- Enlace a la sección "Galeria" -->
+      <li><a href="#form">Formulario</a></li> <!-- Enlace a la sección "Formulario" -->
+    </ul>
+  </nav>
 
-    <div id="sinopsis">
+  <!-- Sección "Carrusel" -->
+  <div id="carrusel" class="carrusel">
+  </div>
 
+  <!-- Sección "Sinopsis" -->
+  <div id="sinopsis">
+  </div>
+
+  <!-- Sección "Galeria" -->
+  <div id="galeria">
+    <p class="galeria-title">Escenas</p> <!-- Título de la galería de escenas -->
+    <div class="galeria-container">
+      <div class="image"><img src="./assets/F_02-min.jpg" alt="Flow Movie 1"></div> <!-- Imagen de la escena 1 -->
+      <div class="image"><img src="./assets/F_03-min.jpg" alt="Flow Movie 2"></div> <!-- Imagen de la escena 2 -->
+      <div class="image"><img src="./assets/F_04-min.jpg" alt="Flow Movie 3"></div> <!-- Imagen de la escena 3 -->
+      <div class="image"><img src="./assets/F_05-min.jpg" alt="Flow Movie 4"></div> <!-- Imagen de la escena 4 -->
     </div>
-
-    <div id="galeria">
-        <p class="galeria-title">Escenas</p>
-      <div class="galeria-container">
-        <img src="./assets/F_02-min.jpg" alt="Flow Movie 1">
-        <img src="./assets/F_03-min.jpg" alt="Flow Movie 2">
-        <img src="./assets/F_04-min.jpg" alt="Flow Movie 3">
-        <img src="./assets/F_05-min.jpg" alt="Flow Movie 4">
-      </div>
-      <div class="galeria-container2">
-        <img src="./assets/Flow_1.png" alt="Flow Movie 5">
-        <img src="./assets/Flow_2.png" alt="Flow Movie 6">
-        <img src="./assets/Flow_3.png" alt="Flow Movie 7">
-        <img src="./assets/Flow_4.png" alt="Flow Movie 8">
-        <img src="./assets/Flow_5.png" alt="Flow Movie 9">
-        <img src="./assets/Flow_6.png" alt="Flow Movie 10">
-      </div>
-      <p class="galeria-title">Personajes</p>
-      <div class="galeria-characters">
-        <img src="./characters/Bird.png" alt="Flow Movie 11">
-        <img src="./characters/Dog.png" alt="Flow Movie 12">
-        <img src="./characters/Lemur.png" alt="Flow Movie 13">
-      </div>
+    <p class="galeria-title">Personajes</p> <!-- Título de la galería de personajes -->
+    <div class="galeria-characters">
+      <img src="./characters/Bird.png" alt="Flow Movie 11"> <!-- Imagen del personaje 1 -->
+      <img src="./characters/Dog.png" alt="Flow Movie 12"> <!-- Imagen del personaje 2 -->
+      <img src="./characters/Lemur.png" alt="Flow Movie 13"> <!-- Imagen del personaje 3 -->
     </div>
-    <div class="popup">
-        <div class="popup-content">
-            <img src="./assets/F_02-min.jpg" alt="Flow Movie 1">
-            <img src="./assets/F_03-min.jpg" alt="Flow Movie 2">
-            <img src="./assets/F_04-min.jpg" alt="Flow Movie 3">
-            <img src="./assets/F_05-min.jpg" alt="Flow Movie 4">
-            <img src="./assets/Flow_1.png" alt="Flow Movie 5">
-            <img src="./assets/Flow_2.png" alt="Flow Movie 6">
-            <img src="./assets/Flow_3.png" alt="Flow Movie 7">
-            <img src="./assets/Flow_4.png" alt="Flow Movie 8">
-            <img src="./assets/Flow_5.png" alt="Flow Movie 9">
-            <img src="./assets/Flow_6.png" alt="Flow Movie 10">
-            <img src="./characters/Bird.png" alt="Flow Movie 11">
-            <img src="./characters/Dog.png" alt="Flow Movie 12">
-            <img src="./characters/Lemur.png" alt="Flow Movie 13">
-        </div>
-    </div>
+  </div>
 
+  <!-- Contenedor para un popup -->
+  <div class="popup" id="popup">
+      <span class="close" >&times;</span> <!-- Botón para cerrar el popup -->
+      <img class="popup-image" src="./assets/F_02-min.jpg" alt="Flow Movie 1"> <!-- Imagen dentro del popup -->
+  </div>
 
-    <div id="form">
-
-    </div>
+  <!-- Sección "Formulario" -->
+  <div id="form">
+  </div>
 </body>
 
+<!-- Pie de página -->
 <footer>
-    <p>Flow Movie</p>
-    <p>2020</p>
-    <p>Desarrollado por: </p>
+  <p>Flow Movie</p> <!-- Nombre de la página -->
+  <p>2020</p> <!-- Año -->
+  <p>Desarrollado por: </p> <!-- Texto indicando el desarrollador -->
 </footer>
-<script src="./script.js"></script>
+<script src="./script.js"></script> <!-- Enlaza el archivo JavaScript para funcionalidades adicionales -->
 </html>

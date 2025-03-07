@@ -171,32 +171,23 @@ nav.scrolled .nav-links a {
   margin-bottom: 1.5rem;
 }
 
-.galeria-container {
+.galeria-container{
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.galeria-container img {
-  width: 50%;
-  transition: transform 0.3s;
-  padding: 1rem;
-  border-radius: 2rem;
-}
-
-.galeria-container2 {
-  display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   justify-content: center;
-  gap: 10px;
-  padding: 2rem 5%;
 }
-.galeria-container2 img {
-  width: 15%;
-  transition: transform 0.3s;
+
+.image {
+  width:40%;
+  padding: 0.5rem;
+}
+
+.image img {
+  width: 100%;
   border-radius: 1.5rem;
+  transition: transform 0.4s;
 }
+
 
 .galeria-characters {
   display: flex;
@@ -213,4 +204,52 @@ nav.scrolled .nav-links a {
 
 #galeria img:hover {
   transform: scale(1.05);
+  cursor: pointer;
+}
+
+.popup{
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.popup-image   {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.5s;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.popup span {
+  position:absolute;
+  top: 0;
+  right: 1vw;
+  font-size: 35px;
+  color: var(--color-white);
+  z-index: 1;
+}
+.close:hover, .close:focus {
+  cursor: pointer;
+  color: var(--color-secondary);
 }
