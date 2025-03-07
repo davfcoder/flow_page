@@ -39,11 +39,12 @@ window.addEventListener("scroll", () => {
 });
 
 // Function to show and close the popup (gallery images)
-var galeria = document.querySelectorAll('.galeria-container img');
+var galeria = document.querySelectorAll('.galeria-container img, .galeria-characters img');
 galeria.forEach(image => {
   image.onclick = () => {
     document.querySelector('.popup').style.display = 'flex';
     document.querySelector('.popup img').src = image.src;
+    document.body.style.overflow = 'hidden';
   }
 });
 
@@ -51,4 +52,5 @@ var close = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 close.onclick = function() { 
   document.querySelector('.popup').style.display = "none";
+  document.body.style.overflow = '';
 }
