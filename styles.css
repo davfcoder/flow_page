@@ -162,8 +162,30 @@ nav.scrolled .nav-links a {
   padding: 0.8rem 1rem;
 }
 
+.text-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15%;
+}
+
+.degraded-image {
+  margin-right: -30rem;
+}
+
+.degraded-image img {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, #1a1e26 -15%, transparent 70%);
+  filter: contrast(1.1);
+}
+
+.sinopsis-text {
+  color: var(--color-white);
+  font-size: 20px;
+}
+
 /* Galeria */
-.galeria-title {
+.galeria-title, .sinopsis-title {
   text-align: center;
   font-size: 1.5rem;
   color: var(--color-white);
