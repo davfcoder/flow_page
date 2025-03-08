@@ -42,17 +42,50 @@
     <ul class="nav-links">
       <li><a href="#carrusel">Carrusel</a></li> <!-- Enlace a la sección "Carrusel" -->
       <li><a href="#sinopsis">Sinopsis</a></li> <!-- Enlace a la sección "Sinopsis" -->
-      <li><a href="#galeria">Galeria</a></li> <!-- Enlace a la sección "Galeria" -->
+      <li><a href="#galeria">Escenas</a></li> <!-- Enlace a la sección "Galeria" -->
       <li><a href="#form">Formulario</a></li> <!-- Enlace a la sección "Formulario" -->
     </ul>
   </nav>
 
   <!-- Sección "Carrusel" -->
-  <div id="carrusel" class="carrusel">
-  </div>
+   <div class="carrusel">
+     <div class="carousel-container">
+       <div class="carousel" id="carousel">
+         <!-- Imágenes del carrusel -->
+         <img
+           src="./assets/Flow_1.png"
+           alt="Flow_1"
+         />
+         <img
+           src="./assets/Flow_2.png"
+           alt="Flow_2"
+         />
+         <img
+           src="./assets/Flow_3.png"
+           alt="Flow_3"
+         />
+         <img
+           src="./assets/Flow_4.png"
+           alt="Flow_4"
+         />
+         <img
+           src="./assets/Flow_5.png"
+           alt="Flow_5"
+         />
+         <img
+           src="./assets/Flow_6.png"
+           alt="Flow_6"
+         />
+         
+       </div>
+       <!-- Botones de navegación -->
+       <button class="prev" id="prev">&#10094;</button>
+       <button class="next" id="next">&#10095;</button>
+     </div>
+   </div>
 
   <!-- Sección "Sinopsis" -->
-  <div class="sinopsis">
+  <div class="sinopsis" id="sinopsis">
       <p class="sinopsis-title">Sinopsis</p>
       <div class="text-image">  
         <div class="degraded-image">
@@ -86,9 +119,6 @@
       <img class="popup-image" src="" alt="Flow Movie 1"> <!-- Imagen dentro del popup -->
   </div>
 
-  <!-- Sección "Formulario" -->
-  <div id="form">
-  </div>
 </body>
 
 <!-- formulario -->

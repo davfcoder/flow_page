@@ -54,3 +54,31 @@ close.onclick = function() {
   document.querySelector('.popup').style.display = "none";
   document.body.style.overflow = '';
 }
+
+
+// Carousel
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.getElementById("carousel");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+  let index = 0; // Índice actual de la imagen mostrada
+
+  // Función para actualizar el desplazamiento del carrusel
+  function updateCarousel() {
+    const offset = -index * 100; // Calcula el desplazamiento en porcentaje
+    carousel.style.transform = `translateX(${offset}%)`; // Aplica la transformación
+  }
+
+  // Evento para el botón "Siguiente"
+  nextBtn.addEventListener("click", function () {
+    index = (index + 1) % 6; // Avanza a la siguiente imagen, vuelve a la primera al final
+    updateCarousel(); // Llama a la función para actualizar la vista
+  });
+
+  // Evento para el botón "Anterior"
+  prevBtn.addEventListener("click", function () {
+    index = (index - 1 + 5) % 6; // Retrocede a la imagen anterior, vuelve a la última si es necesario
+    updateCarousel();
+  });
+});

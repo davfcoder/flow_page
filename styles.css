@@ -162,6 +162,69 @@ nav.scrolled .nav-links a {
   padding: 0.8rem 1rem;
 }
 
+/* Carrusel */
+
+.carrusel {
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+}
+
+.carousel-container {
+  padding-top: 5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  max-width: 25vw;
+  height: 42vw; 
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  box-shadow: 5px 5px 30px rgba(8, 9, 12, 0.569);
+}
+
+/* Contenedor de imágenes en línea */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estilos de las imágenes */
+.carousel img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* Botones de navegación */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.411);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+/* Sinopsis */
+.sinopsis {
+  margin-top: 15rem;
+}
+
 .text-image {
   display: flex;
   justify-content: center;
@@ -187,16 +250,17 @@ nav.scrolled .nav-links a {
 /* Galeria */
 .galeria-title, .sinopsis-title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 3rem;
+  font-weight: bold;
   color: var(--color-white);
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
 }
 
 .galeria-container, .galeria-characters {
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .image {
@@ -269,6 +333,8 @@ nav.scrolled .nav-links a {
   width: 70%;
   border-radius: 20px;
   margin: 0 auto;
+  margin-top: 15rem;
+  margin-bottom: 25rem;
 }
 
 .form-container {
