@@ -237,3 +237,125 @@ nav.scrolled .nav-links a {
   cursor: pointer;
   color: var(--color-secondary);
 }
+
+
+
+.container {
+  display: flex;
+  background: rgb(217, 168, 108); 
+  padding: 30px;
+  width: 70%;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.form-container {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.info-container {
+  flex: 1;
+  padding-left: 20px;
+  border-left: 2px solid var(--bg-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid var(--bg-black);
+  border-radius: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.checkbox-container input {
+  margin-right: 8px;
+}
+
+button {
+  background: var(--bg-black);
+  color: var(--color-white);
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+button:hover {
+  background-color: var(--color-primary);
+}
+
+
+#div-footer {
+  margin-top: 40px;
+  background: rgba(31, 30, 64, 0.686);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#info-redes{
+  padding-top: 20px;
+  color: var(--color-white);
+  margin: 0 auto;
+  width: 25%;
+}
+
+#autores{
+  padding-top: 20px;
+  color: var(--color-white);
+  margin: 0 auto;
+  width: 30%; 
+}
+  
+/* Contenedor del mapa con fondo blanco */
+#mapa {
+  margin:  auto;
+  margin-top: 20px;
+  width: 30%;  /* El mapa ocupará el 30% del ancho de la pantalla */
+  border-radius: 20px; /* Bordes redondeados */
+  display:flex; /* Se mantiene en una posición fija en la pantalla */
+  box-shadow: 0px 4px 10px rgba(243, 244, 246, 0.976); /* Agrega una sombra para diseño */
+}
+
+/* Ajuste del iframe dentro del contenedor */
+#mapa iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#logos-patrocinadores {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0; /* Espaciado superior e inferior */
+}
+
+#logos-patrocinadores img {
+  width: 100%; /* Ajusta el tamaño de la imagen */
+  height: auto; 
+}
