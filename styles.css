@@ -396,7 +396,7 @@ button:hover {
 
 
 #div-footer {
-  margin-top: 40px;
+ 
   background: rgba(31, 30, 64, 0.686);
   display: flex;
   flex-wrap: wrap;
@@ -436,14 +436,14 @@ button:hover {
 }
 
 #logos-patrocinadores {
-  width: 50%;
+  width: 100%; /* Ancho completo de la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0; /* Espaciado superior e inferior */
+  padding: 20px 0 0; /* Espaciado superior e inferior */
 }
 
 #logos-patrocinadores img {
-  width: 100%; /* Ajusta el tamaño de la imagen */
-  height: auto; 
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+
 }
