@@ -1,127 +1,147 @@
 :root {
-  /* Variables globales */
-  --bg-black: #1a1e26;
-  --color-primary: #7693a6;
-  --color-secondary: #d9a86c;
-  --color-tertiary: #85c1a5;
-  --color-white: #f5f5f5;
+  /* Variables globales: Definen colores reutilizables en todo el CSS */
+  --bg-black: #1a1e26; /* Color de fondo oscuro */
+  --color-primary: #7693a6; /* Color principal, usado en elementos destacados */
+  --color-secondary: #d9a86c; /* Color secundario, usado para contraste */
+  --color-tertiary: #85c1a5; /* Color terciario, usado en hover y detalles */
+  --color-white: #f5f5f5; /* Color blanco, para textos o fondos claros */
 }
 
 @font-face {
-  /* Fuente de texto */
-  font-family: "Toroka Wide"; /* Nombre de la fuente */
-  src: url("fonts/Toroka-WideLight.woff2") format("woff2"),
-    url("fonts/Toroka-WideLight.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+  /* Definición de una fuente personalizada */
+  font-family: "Toroka Wide"; /* Nombre de la fuente que se usará en CSS */
+  src: url("fonts/Toroka-WideLight.woff2") format("woff2"), /* Fuente en formato woff2 */
+    url("fonts/Toroka-WideLight.woff") format("woff"); /* Fuente en formato woff */
+  font-weight: 300; /* Grosor ligero de la fuente */
+  font-style: normal; /* Estilo normal (ni itálico ni negrita) */
+  font-display: swap; /* Optimización: usa una fuente alternativa mientras carga */
 }
 
 @font-face {
-  /* Fuente de texto */
+  /* Otra variante de la fuente con diferente peso */
   font-family: "Toroka Wide";
   src: url("fonts/Toroka-WideRegular.woff2") format("woff2"),
     url("fonts/Toroka-WideRegular.woff") format("woff");
-  font-weight: normal;
+  font-weight: normal; /* Grosor estándar */
   font-style: normal;
   font-display: swap;
 }
 
 * {
-  /* Resetear valores por defecto de CSS */
-  margin: 0; /* Margen por defecto */
-  padding: 0; /* Relleno por defecto */
-  box-sizing: border-box;
+  /* Reset de estilos: elimina márgenes y paddings por defecto del navegador */
+  margin: 0; /* Evita márgenes predeterminados en todos los elementos */
+  padding: 0; /* Evita padding predeterminado en todos los elementos */
+  box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño de los elementos */
+}
+
+/* Personalización de la barra de desplazamiento en navegadores WebKit */
+::-webkit-scrollbar {
+  width: 10px; /* Define el ancho de la barra de desplazamiento */
+}
+
+/* Estilo del track (fondo de la barra de desplazamiento) */
+::-webkit-scrollbar-track {
+  background: white; /* Color del fondo de la barra de desplazamiento */
+  border-radius: 5px; /* Bordes redondeados para un mejor diseño */
+}
+
+/* Estilo del thumb (barra de desplazamiento) */
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary); /* Color de la barra móvil */
+  border-radius: 5px; /* Bordes redondeados para un diseño moderno */
+  transition: background 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-tertiary); /* Cambio de color al pasar el mouse */
 }
 
 html {
-  font-size: 10px; /* 1rem = 10px */
+  font-size: 10px; /* Define la base de la unidad rem (1rem = 10px) */
 }
 
 body {
-  padding-top: 12rem; /* Espacio para evitar que el contenido se oculte debajo de la navbar */
-  background-color: var(--bg-black);
-  font-family: Toroka Wide;
+  padding-top: 12rem; /* Espacio superior para evitar que el contenido quede oculto por la navbar */
+  background-color: var(--bg-black); /* Aplica el color de fondo definido en :root */
+  font-family: Toroka Wide; /* Usa la fuente personalizada definida anteriormente */
 }
 
-/* LOADER CONTENT */
+/* Loader de carga */
 #loader {
-  position: fixed;
+  position: fixed; /* Se mantiene en la misma posición en la pantalla */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* Cubre toda la pantalla */
   height: 100%;
-  background: black;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  background: black; /* Color de fondo mientras carga */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  z-index: 1000; /* Se asegura de estar por encima de otros elementos */
+  opacity: 1; /* Inicialmente es completamente visible */
+  transition: opacity 0.5s ease-in-out; /* Hace que desaparezca suavemente */
 }
 
 .loader-content { /* Contenedor del SVG */
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader-content svg {
-  width: 50vh; /* Ajusta el tamaño del SVG al 50% del ancho de la pantalla */
-  max-width: 30%;
+  position: relative; /* Establece la posición del contenedor como relativa, lo que permite posicionar elementos hijos de manera absoluta dentro de él */
+  width: 100%; /* El ancho del contenedor será el 100% del ancho del elemento padre */
+  height: 100%; /* La altura del contenedor será el 100% de la altura del elemento padre */
+  display: flex; /* Utiliza el modelo de caja flexible para el contenedor, lo que facilita la alineación y distribución de los elementos hijos */
+  justify-content: center; /* Alinea los elementos hijos horizontalmente en el centro del contenedor */
+  align-items: center; /* Alinea los elementos hijos verticalmente en el centro del contenedor */
 }
 
-/* Navbar */
+.loader-content svg {
+  width: 50vh; /* Hace que el SVG ocupe la mitad de la altura de la pantalla */
+  max-width: 30%; /* Restringe su tamaño máximo al 30% del ancho */
+}
+
+/* Navbar (barra de navegación) */
 nav {
-  position: fixed; /* Posicionamiento fijo de la navbar */
+  position: fixed; /* Se mantiene fija en la parte superior */
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 100; /* Asegura que esté sobre otros elementos */
-  display: flex; /* Para que los elementos se pongan uno al lado del otro */
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem; /* Ajusta el tamaño del recuadro */
-  width: 100%; /* Ancho máximo para que el navbar ocupe toda la pantalla */
-  height: 12rem;
-  background-color: var(--bg-black);
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 100; /* Se coloca por encima del contenido */
+  display: flex; /* Organiza los elementos en una fila */
+  justify-content: space-between; /* Distribuye los elementos a los extremos */
+  align-items: center; /* Alinea los elementos verticalmente */
+  padding: 1rem 2rem; /* Agrega espacio interno */
+  height: 12rem; /* Altura fija de la navbar */
+  background-color: var(--bg-black); /* Color de fondo definido en :root */
 }
 
 nav .logo {
-  /* Ajusta la ubicación del logo */
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding-left: 2rem;
+  display: flex; /* Utiliza flexbox para organizar los elementos del logo en una fila */
+  align-items: center; /* Centra el logo verticalmente */
+  gap: 2rem; /* Espaciado entre elementos del logo */
+  padding-left: 2rem; /* Margen izquierdo */
 }
 
 .logo {
-  /* Ajusta la ubicación del logo */
-  width: 10rem;
+  width: 10rem; /* Tamaño del logo */
   height: 10rem;
-  padding: 1rem;
+  padding: 1rem; /* Espaciado interno */
 }
 
 .nav-links {
   /* Ajusta la ubicación de los enlaces */
-  list-style: none;
-  display: flex;
-  padding-right: 3rem;
+  list-style: none; /* Elimina los puntos de la lista */
+  display: flex; /* Utiliza el modelo de caja flexible para organizar los enlaces en una fila */
+  padding-right: 3rem; /* Agrega un espacio de 3rem a la derecha de los enlaces */
 }
 
 .nav-links a {
   /* Ajusta los estilos de los enlaces de la navbar */
-  margin-left: 1rem;
-  color: var(--color-white);
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.9rem;
-  font-weight: 700;
-  padding: 1rem 1rem; /* Ajusta el tamaño del recuadro */
+  margin-left: 1rem; /* Espacio a la izquierda de cada enlace */
+  color: var(--color-white); /* Color del texto de los enlaces */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  display: flex; /* Utiliza flexbox para los enlaces */
+  justify-content: space-between; /* Espacio entre los elementos internos */
+  font-size: 1.9rem; /* Tamaño de la fuente de los enlaces */
+  font-weight: 700; /* Grosor de la fuente */
+  padding: 1rem 1rem; /* Espaciado interno de los enlaces */
   border-radius: 5px; /* Bordes redondeados */
-  transition: all 0.3s ease; /* Transición suave */
+  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
   min-width: 80px; /* Ancho mínimo para mantener consistencia */
   text-align: center; /* Centra el texto dentro del recuadro */
 }
@@ -145,314 +165,350 @@ nav .logo {
 /* Efecto de transparencia al hacer scroll */
 nav.scrolled {
   background-color: rgba(26, 30, 38, 0.95); /* Color con opacidad */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
 }
 
 /* Efecto de reducción de tamaño al hacer scroll */
 nav.scrolled .logo {
-  width: 10rem;
-  height: 10rem;
-  transition: all 0.3s ease;
+  width: 10rem; /* Ancho reducido del logo */
+  height: 10rem; /* Altura reducida del logo */
+  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
 }
 
 /* Efecto de reducción de tamaño al hacer scroll */
 nav.scrolled .nav-links a {
-  font-size: 1.8rem;
-  padding: 0.8rem 1rem;
+  font-size: 1.8rem; /* Tamaño de fuente reducido */
+  padding: 0.8rem 1rem; /* Espaciado interno reducido */
 }
 
 /* Carrusel */
 
 .carrusel {
-  margin-top: 5rem;
-  margin-bottom: 8rem;
+  margin-top: 5rem; /* Espaciado superior */
+  margin-bottom: 8rem; /* Espaciado inferior */
 }
 
 .carousel-container {
-  padding-top: 5rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  max-width: 25vw;
-  height: 42vw; 
-  margin: auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.5rem;
-  box-shadow: 5px 5px 30px rgba(8, 9, 12, 0.569);
+  padding-top: 5rem; /* Espaciado superior interno */
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+  position: relative; /* Posicionamiento relativo */
+  max-width: 25vw; /* Ancho máximo del contenedor */
+  height: 42vw; /* Altura del contenedor */
+  margin: auto; /* Centrado horizontal */
+  overflow: hidden; /* Oculta el contenido desbordado */
+  display: flex; /* Modelo de caja flexible */
+  align-items: center; /* Alineación vertical centrada */
+  justify-content: center; /* Alineación horizontal centrada */
+  border-radius: 1.5rem; /* Bordes redondeados */
+  box-shadow: 5px 5px 30px rgba(8, 9, 12, 0.569); /* Sombra para dar profundidad */
 }
 
 /* Contenedor de imágenes en línea */
 .carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  display: flex; /* Modelo de caja flexible */
+  transition: transform 0.5s ease-in-out; /* Transición suave para cambios de estilo */
 }
 
 /* Estilos de las imágenes */
 .carousel img {
-  width: 100%;
-  border-radius: 1rem;
+  width: 100%; /* Ancho completo de la imagen */
+  border-radius: 1rem; /* Bordes redondeados */
 }
 
 /* Botones de navegación */
 .prev,
 .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.411);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 1rem;
+  position: absolute; /* Posicionamiento absoluto */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste de posición vertical */
+  background-color: rgba(0, 0, 0, 0.411); /* Fondo semi-transparente */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px; /* Espaciado interno */
+  cursor: pointer; /* Cursor de puntero */
+  width: 4rem; /* Ancho del botón */
+  height: 4rem; /* Altura del botón */
+  border-radius: 1rem; /* Bordes redondeados */
 }
 
 .prev {
-  left: 1rem;
+  left: 1rem; /* Posición a la izquierda */
 }
 
 .next {
-  right: 1rem;
+  right: 1rem; /* Posición a la derecha */
 }
 
 /* Sinopsis */
 .sinopsis {
-  margin-top: 15rem;
+  margin-top: 15rem; /* Espaciado superior */
 }
 
 .text-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15%;
+  display: flex; /* Modelo de caja flexible */
+  justify-content: center; /* Alineación horizontal centrada */
+  align-items: center; /* Alineación vertical centrada */
+  padding: 0 15%; /* Espaciado interno horizontal */
 }
 
 .degraded-image {
-  border: none;
-  width: 100%;
+  border: none; /* Sin borde */
+  width: 100%; /* Ancho completo */
 }
 
+/* Imagen degradada */
 .degraded-image img {
-  margin-top: 5rem;
-    width: 120%;
-    mask-image: radial-gradient(circle, black 0%, transparent 80%);
-    -webkit-mask-image: radial-gradient(circle, var(--bg-black) 10%, transparent 50%);
-    filter: brightness(1.3) contrast(1.1);
-  }
+  margin-top: 5rem; /* Espaciado superior */
+  width: 120%; /* Ancho de la imagen mayor al contenedor para crear un efecto de desbordamiento */
+  mask-image: radial-gradient(circle, black 0%, transparent 80%); /* Máscara radial para crear un efecto de degradado circular */
+  -webkit-mask-image: radial-gradient(circle, var(--bg-black) 10%, transparent 50%); /* Máscara radial para navegadores WebKit */
+  filter: brightness(1.3) contrast(1.1); /* Ajuste de brillo y contraste para mejorar la visibilidad */
+}
 
+/* Texto de la sinopsis */
 .sinopsis-text {
-  color: var(--color-white);
-  font-size: 20px;
+  color: var(--color-white); /* Color del texto */
+  font-size: 20px; /* Tamaño de la fuente */
 }
 
-/* Galeria */
+/* Títulos de la galería y sinopsis */
 .galeria-title, .sinopsis-title {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--color-white);
+  text-align: center; /* Alineación centrada del texto */
+  font-size: 3rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Fuente en negrita */
+  color: var(--color-white); /* Color del texto */
 }
 
+/* Contenedor de la galería */
 .galeria-container, .galeria-characters {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  display: flex; /* Modelo de caja flexible */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: center; /* Alineación centrada de los elementos */
+  margin-top: 10rem; /* Espaciado superior */
+  margin-bottom: 10rem; /* Espaciado inferior */
 }
 
+/* Estilo de las imágenes */
 .image {
-  width:35%;
-  padding: 0.5rem;
+  width: 35%; /* Ancho de las imágenes */
+  padding: 0.5rem; /* Espaciado interno */
 }
 
 .image img {
-  width: 100%;
-  border-radius: 1.5rem;
-  transition: transform 0.3s;
+  width: 100%; /* Ancho completo de la imagen */
+  border-radius: 1.5rem; /* Bordes redondeados */
+  transition: transform 0.3s; /* Transición suave para el efecto de transformación */
 }
 
+/* Efecto hover en las imágenes de la galería */
 #galeria img:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+  transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
 }
 
-.popup{
-  display:none;
-  position: fixed;
+/* Popup para la galería */
+.popup {
+  display: none; /* Oculta el popup por defecto */
+  position: fixed; /* Posicionamiento fijo */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 0, 0, 0.85);
-  z-index: 100;
+  width: 100%; /* Ancho completo de la pantalla */
+  height: 100%; /* Altura completa de la pantalla */
+  background: rgb(0, 0, 0, 0.85); /* Fondo semi-transparente */
+  z-index: 100; /* Se asegura de estar por encima de otros elementos */
 }
 
-.popup-image   {
-  margin: auto;
-  width: 80%;
-  height: 80%;
-  object-fit:contain;
-  border-radius: 0.9rem;
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.5s;
-  animation-name: zoom;
-  animation-duration: 0.5s;
+/* Imagen dentro del popup */
+.popup-image {
+  margin: auto; /* Centrado horizontal */
+  width: 80%; /* Ancho de la imagen */
+  height: 80%; /* Altura de la imagen */
+  object-fit: contain; /* Ajuste de la imagen dentro del contenedor */
+  border-radius: 0.9rem; /* Bordes redondeados */
+  -webkit-animation-name: zoom; /* Animación de zoom para navegadores WebKit */
+  -webkit-animation-duration: 0.5s; /* Duración de la animación */
+  animation-name: zoom; /* Animación de zoom */
+  animation-duration: 0.5s; /* Duración de la animación */
 }
 
+/* Animación de zoom para navegadores WebKit */
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {-webkit-transform: scale(0);} /* Escala inicial */
+  to {-webkit-transform: scale(1);} /* Escala final */
 }
 
+/* Animación de zoom */
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {transform: scale(0);} /* Escala inicial */
+  to {transform: scale(1);} /* Escala final */
 }
 
+/* Botón de cierre del popup */
 .popup span {
-  position:absolute;
+  position: absolute; /* Posicionamiento absoluto */
   top: 0;
-  right: 1vw;
-  font-size: 35px;
-  color: var(--color-white);
+  right: 1vw; /* Distancia desde el borde derecho */
+  font-size: 35px; /* Tamaño de la fuente */
+  color: var(--color-white); /* Color del texto */
 }
+
+/* Efecto hover en el botón de cierre */
 .close:hover, .close:focus {
-  cursor: pointer;
-  color: var(--color-secondary);
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  color: var(--color-secondary); /* Color del texto al hacer hover */
 }
 
-
-
+/* Contenedor del formulario */
 .container-form {
-  display: flex;
-  background: rgb(217, 168, 108); 
-  padding: 30px;
-  width: 70%;
-  border-radius: 20px;
-  margin: 0 auto;
-  margin-top: 15rem;
-  margin-bottom: 25rem;
+  display: flex; /* Modelo de caja flexible */
+  background: rgb(217, 168, 108); /* Color de fondo */
+  padding: 30px; /* Espaciado interno */
+  width: 70%; /* Ancho del contenedor */
+  border-radius: 20px; /* Bordes redondeados */
+  margin: 0 auto; /* Centrado horizontal */
+  margin-top: 15rem; /* Espaciado superior */
+  margin-bottom: 25rem; /* Espaciado inferior */
 }
 
+/* Contenedor del formulario */
 .form-container {
-  flex: 1;
-  padding-right: 20px;
+  flex: 1; /* Ocupa el mismo espacio que el contenedor de información */
+  padding-right: 20px; /* Espaciado interno a la derecha */
 }
 
+/* Contenedor de información */
 .info-container {
-  flex: 1;
-  padding-left: 20px;
-  border-left: 2px solid var(--bg-black);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex: 1; /* Ocupa el mismo espacio que el contenedor del formulario */
+  padding-left: 20px; /* Espaciado interno a la izquierda */
+  border-left: 2px solid var(--bg-black); /* Borde izquierdo */
+  display: flex; /* Modelo de caja flexible */
+  flex-direction: column; /* Dirección de los elementos en columna */
+  justify-content: center; /* Alineación vertical centrada */
 }
 
+/* Estilo de los encabezados */
 h2 {
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Espaciado inferior */
 }
 
+/* Estilo de los párrafos */
 p {
-  font-size: 16px;
-
+  font-size: 16px; /* Tamaño de la fuente */
 }
 
+/* Estilo de los campos de entrada y área de texto */
 input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border: 1px solid var(--bg-black);
-  border-radius: 10px;
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  margin: 5px 0 20px 0; /* Espaciado externo */
+  border: 1px solid var(--bg-black); /* Borde */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Contenedor de checkbox */
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  font-size: 14px;
+  display: flex; /* Modelo de caja flexible */
+  align-items: center; /* Alineación vertical centrada */
+  gap: 8px; /* Espacio entre el checkbox y el texto */
 }
 
+/* Estilo del checkbox */
+input[type="checkbox"] {
+  width: 20px; /* Ancho del checkbox */
+  height: 20px; /* Altura del checkbox */
+  cursor: pointer; /* Cursor de puntero */
+}
 
+/* Estilo del texto del checkbox */
+.checkboxtext {
+  margin-top: -15px; /* Ajuste de margen superior */
+  font-size: 110%; /* Tamaño de la fuente */
+  display: inline; /* Muestra en línea */
+}
+
+/* Estilo del botón */
 button {
-  background: var(--bg-black);
-  color: var(--color-white);
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 15px;
+  background: var(--bg-black); /* Color de fondo */
+  color: var(--color-white); /* Color del texto */
+  width: 100%; /* Ancho completo */
+  padding: 12px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de puntero */
+  font-size: 16px; /* Tamaño de la fuente */
 }
+
+/* Estilo del botón al hacer hover */
 button:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary); /* Cambio de color de fondo */
 }
 
-
+/* Contenedor del pie de página */
 #div-footer {
-   background: rgba(31, 30, 64, 0.686);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
+  background: rgba(31, 30, 64, 0.686); /* Color de fondo semi-transparente */
+  display: flex; /* Modelo de caja flexible */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: center; /* Alineación centrada */
+  align-items: center; /* Alineación vertical centrada */
+  padding: 1rem; /* Espaciado interno */
 }
 
-#info-redes{
-  padding-top: 20px;
-  color: var(--color-white);
-  margin:auto;
-  width: 25%;
+/* Información de redes sociales */
+#info-redes {
+  padding-top: 20px; /* Espaciado superior */
+  color: var(--color-white); /* Color del texto */
+  margin: auto; /* Centrado horizontal */
+  width: 25%; /* Ancho del contenedor */
 }
 
+/* Estilo de los enlaces de redes sociales */
 #info-redes a {
-  color: var(--color-white);
-  text-decoration: none;
+  color: var(--color-white); /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
 }
 
+/* Estilo de los enlaces de redes sociales */
 #redes a {
-  padding-right: 10px;
-  text-decoration: none;
+  padding-right: 10px; /* Espaciado a la derecha */
+  text-decoration: none; /* Sin subrayado */
 }
 
-#autores{
-  padding-top: 20px;
-  color: var(--color-white);
-  margin: 0 auto;
-  width: 30%; 
-} 
-/* Contenedor del mapa con fondo blanco */
+/* Información de los autores */
+#autores {
+  padding-top: 20px; /* Espaciado superior */
+  color: var(--color-white); /* Color del texto */
+  margin: 0 auto; /* Centrado horizontal */
+  width: 30%; /* Ancho del contenedor */
+}
+
+/* Contenedor del mapa */
 #mapa {
   padding-top: 20px; /* Espaciado superior */
-  margin: auto;
-  width: 30%;  /* El mapa ocupará el 30% del ancho de la pantalla */
-  display:flex; /* Se mantiene en una posición fija en la pantalla */
+  margin: auto; /* Centrado horizontal */
+  width: 30%; /* Ancho del contenedor */
+  display: flex; /* Modelo de caja flexible */
 }
 
 /* Ajuste del iframe dentro del contenedor */
 #mapa iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 1rem;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  border: none; /* Sin borde */
+  border-radius: 1rem; /* Bordes redondeados */
   box-shadow: var(--color-tertiary) 0 0 10px; /* Sombra alrededor del mapa */
 }
 
+/* Contenedor de logos de patrocinadores */
 #logos-patrocinadores {
-  width: 100%; /* Ancho completo de la pantalla */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0 0; /* Espaciado superior e inferior */
+  width: 100%; /* Ancho completo */
+  display: flex; /* Modelo de caja flexible */
+  justify-content: center; /* Alineación centrada */
+  align-items: center; /* Alineación vertical centrada */
+  padding: 20px 0 0; /* Espaciado superior */
 }
 
+/* Estilo de las imágenes de los logos de patrocinadores */
 #logos-patrocinadores img {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-
+  width: 100%; /* Ancho completo */
 }
