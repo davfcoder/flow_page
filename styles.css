@@ -233,14 +233,17 @@ nav.scrolled .nav-links a {
 }
 
 .degraded-image {
-  margin-right: -30rem;
+  border: none;
+  width: 100%;
 }
 
 .degraded-image img {
-  width: 100%;
-  mask-image: linear-gradient(to bottom, #1a1e26 -15%, transparent 70%);
-  filter: contrast(1.1);
-}
+  margin-top: 5rem;
+    width: 120%;
+    mask-image: radial-gradient(circle, black 0%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle, var(--bg-black) 10%, transparent 50%);
+    filter: brightness(1.3) contrast(1.1);
+  }
 
 .sinopsis-text {
   color: var(--color-white);
@@ -326,7 +329,7 @@ nav.scrolled .nav-links a {
 
 
 
-.container {
+.container-form {
   display: flex;
   background: rgb(217, 168, 108); 
   padding: 30px;
@@ -375,9 +378,6 @@ input, textarea {
   font-size: 14px;
 }
 
-.checkbox-container input {
-  margin-right: 8px;
-}
 
 button {
   background: var(--bg-black);
