@@ -110,7 +110,7 @@ nav {
   justify-content: space-between; /* Distribuye los elementos a los extremos */
   align-items: center; /* Alinea los elementos verticalmente */
   padding: 2rem 0;
-  height: 14rem; /* Altura fija de la navbar */
+  height: 10rem; /* Altura fija de la navbar */
   transition: transform 0.5s ease-in-out;
 }
 
@@ -118,8 +118,8 @@ nav .logo {
   display: flex; /* Utiliza flexbox para organizar los elementos del logo en una fila */
   align-items: center; /* Centra el logo verticalmente */
   margin-left: 10rem; /* Margen izquierdo */
-  width: 12rem; /* Tamaño del logo */
-  height: 12rem;
+  width: 10rem; /* Tamaño del logo */
+  height: 10rem;
 }
 
 .nav-links {
@@ -161,11 +161,6 @@ nav .logo {
   transition: all 0.3s ease; /* Transición suave */
 }
 
-.hidden-nav {
-  transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
-}
-
 /* Carrusel */
 
 .carousel-section {
@@ -177,21 +172,21 @@ nav .logo {
   margin: 0 auto;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
 .item {
   position: absolute;
-  width: 500px;
-  height: 85vh;
+  width: 25vw;
+  height: 65vh;
   text-align: justify;
   background-color: #fff;
   border-radius: 1rem;
   padding: 0;
   transition: 0.5s;
-  left: calc(50% - 250px);
-  top: 5%;
+  left: calc(50% - 12.5vw);
+  top: 16%;
 }
 
 .item img {
@@ -289,6 +284,13 @@ nav .logo {
 }
 
 /* Galería */
+.galeria {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 15rem
+ }
+
+
 /* Título de la galería*/
 .galeria-title {
   text-align: center; /* Alineación centrada del texto */
@@ -298,6 +300,7 @@ nav .logo {
 }
 
 /* Contenedor de la galería */
+
 .galeria-container,
 .galeria-characters {
   display: flex; /* Modelo de caja flexible */

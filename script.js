@@ -37,32 +37,32 @@ function showNavbar() {
 }
 
 // Función para ocultar la navbar
-function hideNavbar() {
-  if (window.scrollY > 0) { // Solo oculta si el usuario NO está en la parte superior
-    navbar.style.top = "-10rem"; // Mueve la navbar hacia arriba para ocultarla
-  }
-}
+// function hideNavbar() {
+//   if (window.scrollY > 0) { // Solo oculta si el usuario NO está en la parte superior
+//     navbar.style.top = "-10rem"; // Mueve la navbar hacia arriba para ocultarla
+//   }
+// }
 
-// Detectar cuando el usuario está en la parte superior de la página
-window.addEventListener("scroll", () => {
-  if (window.scrollY === 0) {
-    showNavbar(); // Siempre visible si está en la parte superior
-  } else {
-    hideNavbar(); // Se oculta si baja
-  }
-});
+// // Detectar cuando el usuario está en la parte superior de la página
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY === 0) {
+//     showNavbar(); // Siempre visible si está en la parte superior
+//   } else {
+//     hideNavbar(); // Se oculta si baja
+//   }
+// });
 
-// Detectar cuando el usuario pasa el mouse por la parte superior de la pantalla
-document.addEventListener("mousemove", (event) => {
-  if (event.clientY < 50) { // Si el mouse está en la parte superior (50px desde arriba)
-    showNavbar();
-  }
-});
+// // Detectar cuando el usuario pasa el mouse por la parte superior de la pantalla
+// document.addEventListener("mousemove", (event) => {
+//   if (event.clientY < 50) { // Si el mouse está en la parte superior (50px desde arriba)
+//     showNavbar();
+//   }
+// });
 
-// Ocultar la navbar después de 3 segundos de inactividad
-navbar.addEventListener("mouseleave", () => {
-  hideTimeout = setTimeout(hideNavbar, 3000);
-});
+// // Ocultar la navbar después de 3 segundos de inactividad
+// navbar.addEventListener("mouseleave", () => {
+//   hideTimeout = setTimeout(hideNavbar, 3000);
+// });
 
 window.addEventListener("scroll", () => {
   const nav = document.querySelector("nav"); // Selecciona la navbar
@@ -115,7 +115,7 @@ let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 
 // Define el índice del elemento activo inicial en el carrusel
-let active = 3;
+let active = 2;
 
 // Función para cargar y mostrar los elementos del carrusel
 function loadShow(){

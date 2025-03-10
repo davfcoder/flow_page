@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Metadatos y enlaces a recursos externos -->
-    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la vista para que sea responsive -->
-    <link rel="stylesheet" href="./styles.css"> <!-- Enlaza el archivo CSS para estilos -->
-    <title>Flow Movie</title> <!-- Define el título de la página -->
-    <link rel="icon" type="image/png" href="favicon/favicon.png"> <!-- Enlaza el favicon de la página -->
+  <!-- Metadatos y enlaces a recursos externos -->
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Configura la vista para que sea responsive -->
+  <link rel="stylesheet" href="./styles.css"> <!-- Enlaza el archivo CSS para estilos -->
+  <title>Flow Movie</title> <!-- Define el título de la página -->
+  <link rel="icon" type="image/png" href="favicon/favicon.png"> <!-- Enlaza el favicon de la página -->
 </head>
+
 <body>
   <!-- Contenedor para un cargador animado -->
   <div id="loader">
@@ -16,9 +19,11 @@
       <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.03 7.76">
         <defs>
           <style>
-            .cls-1, .cls-2 {
-              stroke-width: 0px; 
+            .cls-1,
+            .cls-2 {
+              stroke-width: 0px;
             }
+
             .cls-2 {
               fill: #fff;
             }
@@ -26,14 +31,22 @@
         </defs>
 
         <!-- Definición de las formas del SVG -->
-        <path class="cls-2" d="m15.58,4.24c.06-.5.11-1,.23-1.48.36-1.45,1.31-2.33,2.79-2.55,1.23-.18,2.37.07,3.27.97,1.55,1.54,1.47,3.91.15,5.38-1.04,1.16-2.75,1.51-4.21.89-.83-.35-1.51-.89-2.02-1.63-.14-.2-.19-.31-.23-.61-.04-.32-.04-.65,0-.97Z"></path>
-        <path class="cls-2" d="m6.69,6.52c-1.45,1.13-3.03,1.38-4.71.58C.75,6.52.17,5.45.03,4.14c-.07-.66-.04-1.31.28-1.94C.86,1.11,1.74.46,2.9.15c.2-.05.4-.08.6-.11.54-.07,1.09-.05,1.61.09,1.22.32,2.09,1.16,2.41,2.45.16.63.14,1.31.2,1.97.08.88-.4,1.48-1.04,1.97Z"></path>
-        <path class="cls-1" d="m17.34,6.46c.66.65,1.58.57,2.17-.16.72-.88.9-1.9.86-2.99,0-.22-.1-.29-.33-.29-.46,0-.89-.37-.97-.78-.08-.4.05-.62.55-.87-.05-.07-.08-.13-.12-.18-.66-.7-1.69-.65-2.36.12-.7.81-.86,1.77-.77,2.79.07.88.32,1.71.98,2.35Z"></path>
-        <path class="cls-1" d="m6.28,3.11c-.31.03-.52-.06-.73-.29-.48-.5-.25-1.2.28-1.37.04-.01.12-.03.17-.04.01,0,.02-.02.01-.03-.06-.09-.11-.18-.18-.24-.75-.83-1.97-.77-2.66.17-1.04,1.41-1.03,2.91-.32,4.44.21.45.57.8,1.06.96.65.22,1.19-.02,1.64-.49.77-.81,1-1.82,1.01-2.91,0-.19-.11-.21-.27-.2Z"></path>
+        <path class="cls-2"
+          d="m15.58,4.24c.06-.5.11-1,.23-1.48.36-1.45,1.31-2.33,2.79-2.55,1.23-.18,2.37.07,3.27.97,1.55,1.54,1.47,3.91.15,5.38-1.04,1.16-2.75,1.51-4.21.89-.83-.35-1.51-.89-2.02-1.63-.14-.2-.19-.31-.23-.61-.04-.32-.04-.65,0-.97Z">
+        </path>
+        <path class="cls-2"
+          d="m6.69,6.52c-1.45,1.13-3.03,1.38-4.71.58C.75,6.52.17,5.45.03,4.14c-.07-.66-.04-1.31.28-1.94C.86,1.11,1.74.46,2.9.15c.2-.05.4-.08.6-.11.54-.07,1.09-.05,1.61.09,1.22.32,2.09,1.16,2.41,2.45.16.63.14,1.31.2,1.97.08.88-.4,1.48-1.04,1.97Z">
+        </path>
+        <path class="cls-1"
+          d="m17.34,6.46c.66.65,1.58.57,2.17-.16.72-.88.9-1.9.86-2.99,0-.22-.1-.29-.33-.29-.46,0-.89-.37-.97-.78-.08-.4.05-.62.55-.87-.05-.07-.08-.13-.12-.18-.66-.7-1.69-.65-2.36.12-.7.81-.86,1.77-.77,2.79.07.88.32,1.71.98,2.35Z">
+        </path>
+        <path class="cls-1"
+          d="m6.28,3.11c-.31.03-.52-.06-.73-.29-.48-.5-.25-1.2.28-1.37.04-.01.12-.03.17-.04.01,0,.02-.02.01-.03-.06-.09-.11-.18-.18-.24-.75-.83-1.97-.77-2.66.17-1.04,1.41-1.03,2.91-.32,4.44.21.45.57.8,1.06.96.65.22,1.19-.02,1.64-.49.77-.81,1-1.82,1.01-2.91,0-.19-.11-.21-.27-.2Z">
+        </path>
       </svg>
     </div>
   </div>
-  
+
   <!-- Barra de navegación -->
   <nav>
     <div class="logo">
@@ -43,6 +56,7 @@
       <li><a href="#carrusel">Carrusel</a></li> <!-- Enlace a la sección "Carrusel" -->
       <li><a href="#sinopsis">Sinopsis</a></li> <!-- Enlace a la sección "Sinopsis" -->
       <li><a href="#galeria">Escenas</a></li> <!-- Enlace a la sección "Galeria" -->
+      <li><a href="#characters">Personajes</a></li> <!-- Enlace a la sección "Formulario" -->
       <li><a href="#titulo-form">Formulario</a></li> <!-- Enlace a la sección "Formulario" -->
     </ul>
   </nav>
@@ -63,28 +77,31 @@
         <img src="./assets/Flow_4.png" alt="Flow_4" />
       </div>
       <div class="item">
-        <img src="./assets/Flow_5.png" alt="Flow_5" /> 
+        <img src="./assets/Flow_5.png" alt="Flow_5" />
       </div>
       <div class="item">
         <img src="./assets/Flow_6.png" alt="Flow_6" />
       </div>
       <button class="next" id="next">></button>
-      <button class="prev" id="prev"><</button>
+      <button class="prev" id="prev">
+        << /button>
     </div>
   </section>
 
   <!-- Sección "Sinopsis" -->
   <section class="sinopsis" id="sinopsis">
-    <div class="text-image">  
+    <div class="text-image">
       <div class="degraded-image">
         <img src="./assets/flow-pasto.jpg" alt="">
-      </div>  
-      <div>
-          <p class="sinopsis-title">Sinopsis</p>
-          <p class="sinopsis-text"> Cat es un animal solitario, pero debido a que su hogar fue devastado por una gran inundación, encuentra refugio en una barca poblada por diversas especies, y tendrá que unirse con ellos a pesar de sus diferencias.</p>
-        </div>
       </div>
-    </section>
+      <div>
+        <p class="sinopsis-title">Sinopsis</p>
+        <p class="sinopsis-text"> Cat es un animal solitario, pero debido a que su hogar fue devastado por una gran
+          inundación, encuentra refugio en una barca poblada por diversas especies, y tendrá que unirse con ellos a
+          pesar de sus diferencias.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Sección "Galeria" -->
   <section id="galeria">
@@ -95,6 +112,9 @@
       <div class="image"><img src="./assets/F_04-min.jpg" alt="Flow Movie 3"></div> <!-- Imagen de la escena 3 -->
       <div class="image"><img src="./assets/F_05-min.jpg" alt="Flow Movie 4"></div> <!-- Imagen de la escena 4 -->
     </div>
+  </section>
+
+  <section class="characters" id="characters">
     <p class="galeria-title">Personajes</p> <!-- Título de la galería de personajes -->
     <div class="galeria-characters">
       <div class="image"><img src="./characters/Bird.png" alt="Flow Movie 11"></div> <!-- Imagen del personaje 1 -->
@@ -105,50 +125,52 @@
 
   <!-- Contenedor para un popup -->
   <div class="popup" id="popup">
-      <span class="close" >&times;</span> <!-- Botón para cerrar el popup -->
-      <img class="popup-image" src="" alt="Flow Movie 1"> <!-- Imagen dentro del popup -->
+    <span class="close">&times;</span> <!-- Botón para cerrar el popup -->
+    <img class="popup-image" src="" alt="Flow Movie 1"> <!-- Imagen dentro del popup -->
   </div>
 
   <!-- formulario -->
-  <p id="titulo-form" >Formulario de contacto</p>
-<section class="container-form" id="form">
-  <!-- Contenedor de información -->
-  <div class="info-container">
-    <h2>ENVÍANOS UN MENSAJE</h2>
-    <p>Si tienes alguna inquietud o comentario sobre nuestra película, por favor escríbenos y responderemos a la mayor brevedad posible.</p>
-  </div>
-  
-  <!-- Contenedor del formulario -->
-  <div class="form-container">
+  <section class="container-form" id="form">
+    <p id="titulo-form">Formulario de contacto</p>
+    <!-- Contenedor de información -->
+    <div class="info-container">
+      <h2>ENVÍANOS UN MENSAJE</h2>
+      <p>Si tienes alguna inquietud o comentario sobre nuestra película, por favor escríbenos y responderemos a la mayor
+        brevedad posible.</p>
+    </div>
+
+    <!-- Contenedor del formulario -->
+    <div class="form-container">
       <h2>Contáctanos</h2>
       <form action="#" method="dialog">
-          <!-- Campo para el nombre -->
-          <label for="nombre">Nombre *</label>
-          <input type="text" id="nombre" name="nombre" required>
+        <!-- Campo para el nombre -->
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-          <!-- Campo para el correo electrónico -->
-          <label for="correo">Correo Electrónico *</label>
-          <input type="email" id="correo" name="correo" required>
+        <!-- Campo para el correo electrónico -->
+        <label for="correo">Correo Electrónico *</label>
+        <input type="email" id="correo" name="correo" required>
 
-          <!-- Campo para el teléfono -->
-          <label for="telefono">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido">
+        <!-- Campo para el teléfono -->
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}"
+          title="Ingresa un número de teléfono válido">
 
-          <!-- Campo para el mensaje -->
-          <label for="mensaje">Mensaje *</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <!-- Campo para el mensaje -->
+        <label for="mensaje">Mensaje *</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-          <!-- Campo para aceptar las políticas de tratamiento de datos -->
-          <div class="checkbox-container">
-              <input type="checkbox" id="politicas" name="politicas" required>
-              <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label>
-          </div>
+        <!-- Campo para aceptar las políticas de tratamiento de datos -->
+        <div class="checkbox-container">
+          <input type="checkbox" id="politicas" name="politicas" required>
+          <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label>
+        </div>
 
-          <!-- Botón para enviar el formulario -->
-          <button type="submit">Enviar Mensaje</button>
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Enviar Mensaje</button>
       </form>
-  </div>
-</section>
+    </div>
+  </section>
 
 </body>
 
@@ -159,18 +181,24 @@
       <div id="redes">
         <!-- Enlace a Twitter -->
         <a href="https://twitter.com/gintszilbalodis" target="_blank" data-cursor="-lgi -transparent" data-magnetic="">
-          <svg class="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="24px" height="24px" fill="#d9a86c">
+          <svg class="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="24px" height="24px"
+            fill="#d9a86c">
             <title>Twitter</title>
-              <path d="M50.0625 10.4375 C48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"/>
-          </svg>  
+            <path
+              d="M50.0625 10.4375 C48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z" />
+          </svg>
         </a>
 
         <!-- Enlace a Instagram -->
         <a href="https://www.instagram.com/gzilbalodis">
           <svg class="insta" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <title>Instagram</title>
-            <path d="M12.4835 8.98918C11.8593 8.89662 11.2218 9.00324 10.6618 9.29386C10.1017 9.58449 9.64745 10.0443 9.36376 10.608C9.08006 11.1716 8.98131 11.8103 9.08156 12.4333C9.18181 13.0563 9.47595 13.6319 9.92214 14.0781C10.3683 14.5242 10.9439 14.8184 11.5669 14.9186C12.1898 15.0189 12.8286 14.9201 13.3922 14.6364C13.9559 14.3527 14.4157 13.8985 14.7063 13.3384C14.997 12.7783 15.1036 12.1409 15.011 11.5167C14.9166 10.88 14.6199 10.2905 14.1648 9.83541C13.7097 9.38028 13.1202 9.08359 12.4835 8.98918Z" fill="#D4A373"/> <!-- Color corregido -->
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1C3.68629 1 1 3.68629 1 7V17C1 20.3137 3.68629 23 7 23H17C20.3137 23 23 20.3137 23 17V7C23 3.68629 20.3137 1 17 1H7ZM9.74061 7.51861C10.6741 7.03424 11.7366 6.85655 12.7769 7.01081C13.838 7.16817 14.8204 7.66264 15.579 8.4212C16.3376 9.17975 16.832 10.1622 16.9894 11.2233C17.1436 12.2636 16.966 13.3261 16.4816 14.2596C15.9972 15.1931 15.2308 15.9501 14.2914 16.4229C13.352 16.8957 12.2874 17.0603 11.2491 16.8932C10.2108 16.7261 9.25158 16.2359 8.50793 15.4923C7.76428 14.7486 7.27404 13.7894 7.10696 12.7511C6.93988 11.7128 7.10446 10.6482 7.57729 9.70878C8.05011 8.76938 8.80711 8.00299 9.74061 7.51861ZM17.5 5.5C16.9477 5.5 16.5 5.94772 16.5 6.5C16.5 7.05228 16.9477 7.5 17.5 7.5H17.51C18.0623 7.5 18.51 7.05228 18.51 6.5C18.51 5.94772 18.0623 5.5 17.51 5.5H17.5Z" fill="#D4A373"/>
+            <path
+              d="M12.4835 8.98918C11.8593 8.89662 11.2218 9.00324 10.6618 9.29386C10.1017 9.58449 9.64745 10.0443 9.36376 10.608C9.08006 11.1716 8.98131 11.8103 9.08156 12.4333C9.18181 13.0563 9.47595 13.6319 9.92214 14.0781C10.3683 14.5242 10.9439 14.8184 11.5669 14.9186C12.1898 15.0189 12.8286 14.9201 13.3922 14.6364C13.9559 14.3527 14.4157 13.8985 14.7063 13.3384C14.997 12.7783 15.1036 12.1409 15.011 11.5167C14.9166 10.88 14.6199 10.2905 14.1648 9.83541C13.7097 9.38028 13.1202 9.08359 12.4835 8.98918Z"
+              fill="#D4A373" /> <!-- Color corregido -->
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7 1C3.68629 1 1 3.68629 1 7V17C1 20.3137 3.68629 23 7 23H17C20.3137 23 23 20.3137 23 17V7C23 3.68629 20.3137 1 17 1H7ZM9.74061 7.51861C10.6741 7.03424 11.7366 6.85655 12.7769 7.01081C13.838 7.16817 14.8204 7.66264 15.579 8.4212C16.3376 9.17975 16.832 10.1622 16.9894 11.2233C17.1436 12.2636 16.966 13.3261 16.4816 14.2596C15.9972 15.1931 15.2308 15.9501 14.2914 16.4229C13.352 16.8957 12.2874 17.0603 11.2491 16.8932C10.2108 16.7261 9.25158 16.2359 8.50793 15.4923C7.76428 14.7486 7.27404 13.7894 7.10696 12.7511C6.93988 11.7128 7.10446 10.6482 7.57729 9.70878C8.05011 8.76938 8.80711 8.00299 9.74061 7.51861ZM17.5 5.5C16.9477 5.5 16.5 5.94772 16.5 6.5C16.5 7.05228 16.9477 7.5 17.5 7.5H17.51C18.0623 7.5 18.51 7.05228 18.51 6.5C18.51 5.94772 18.0623 5.5 17.51 5.5H17.5Z"
+              fill="#D4A373" />
           </svg>
         </a>
 
@@ -178,22 +206,29 @@
         <a href="https://vimeo.com/gints" target="_blank" data-cursor="-lgi -transparent" data-magnetic="">
           <svg class="vimeo" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <title>Vimeo</title>
-            <mask id="mask0_9_399" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="2" width="24" height="19">
-              <path d="M0 2H23.955V20.9527H0V2Z" fill="white"/>
+            <mask id="mask0_9_399" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="2" width="24"
+              height="19">
+              <path d="M0 2H23.955V20.9527H0V2Z" fill="white" />
             </mask>
             <g mask="url(#mask0_9_399)"></g>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8528 5.52878C24.0316 4.60826 24.0278 3.66163 23.4078 2.94567C22.5432 1.94169 20.7026 1.90476 19.4416 2.08197C18.416 2.2258 14.9465 3.6302 13.7658 6.99232C15.8575 6.84653 16.9538 7.13064 16.7525 9.24337C16.6681 10.1273 16.1815 11.096 15.6382 12.0243C15.0105 13.0945 13.8342 15.1962 12.2914 13.6814C10.9017 12.3178 11.006 9.71038 10.6884 7.97392C10.5115 6.9996 10.3243 5.78555 9.97635 4.78352C9.67654 3.92177 8.98886 2.88281 8.14828 2.65765C7.24518 2.4142 6.1286 2.7942 5.47286 3.14863C3.38525 4.27425 1.79428 5.87576 -0.0117188 7.19705V7.32064C0.346152 7.63441 0.442539 8.14919 0.969572 8.21933C2.21273 8.38731 3.39744 7.15639 4.22389 8.43703C4.72673 9.21958 4.88389 10.0774 5.20557 10.9211C5.63583 12.0445 5.96777 13.268 6.31964 14.5598C6.91518 16.7484 7.64738 20.0181 9.70886 20.819C10.7608 21.2288 12.3419 20.6807 13.1422 20.2451C15.3105 19.068 17 17.3612 18.4462 15.6245C21.7528 11.515 23.577 6.85949 23.8528 5.52878Z" fill="#D4A373"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M23.8528 5.52878C24.0316 4.60826 24.0278 3.66163 23.4078 2.94567C22.5432 1.94169 20.7026 1.90476 19.4416 2.08197C18.416 2.2258 14.9465 3.6302 13.7658 6.99232C15.8575 6.84653 16.9538 7.13064 16.7525 9.24337C16.6681 10.1273 16.1815 11.096 15.6382 12.0243C15.0105 13.0945 13.8342 15.1962 12.2914 13.6814C10.9017 12.3178 11.006 9.71038 10.6884 7.97392C10.5115 6.9996 10.3243 5.78555 9.97635 4.78352C9.67654 3.92177 8.98886 2.88281 8.14828 2.65765C7.24518 2.4142 6.1286 2.7942 5.47286 3.14863C3.38525 4.27425 1.79428 5.87576 -0.0117188 7.19705V7.32064C0.346152 7.63441 0.442539 8.14919 0.969572 8.21933C2.21273 8.38731 3.39744 7.15639 4.22389 8.43703C4.72673 9.21958 4.88389 10.0774 5.20557 10.9211C5.63583 12.0445 5.96777 13.268 6.31964 14.5598C6.91518 16.7484 7.64738 20.0181 9.70886 20.819C10.7608 21.2288 12.3419 20.6807 13.1422 20.2451C15.3105 19.068 17 17.3612 18.4462 15.6245C21.7528 11.515 23.577 6.85949 23.8528 5.52878Z"
+              fill="#D4A373" />
             </g>
           </svg>
         </a>
       </div>
 
       <!-- Enlace a Dream Well Studio -->
-      <a href="https://www.dreamwell.lv/"><p>DREAM WELL STUDIO</p></a>
+      <a href="https://www.dreamwell.lv/">
+        <p>DREAM WELL STUDIO</p>
+      </a>
       <!-- Dirección de Dream Well Studio -->
-      <a href="https://maps.app.goo.gl/eWk4jefJxjJve3kS6"><p>Rīga, Krišjāņa Valdemāra iela 49 - 11, LV-1010</p></a>
+      <a href="https://maps.app.goo.gl/eWk4jefJxjJve3kS6">
+        <p>Rīga, Krišjāņa Valdemāra iela 49 - 11, LV-1010</p>
+      </a>
     </div>
-  
+
     <!-- Sección de autores -->
     <div id="autores">
       <h2>Desarrollado por:</h2> <!-- Título de la sección de autores -->
@@ -203,15 +238,19 @@
     </div>
     <div id="mapa">
       <!-- iframe permite incrustar el mapa de Google Maps -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.3751033676303!2d24.115637876490133!3d56.9595068984083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfced5176aa5%3A0x3e4fb4ef2fe4c072!2zS3JpxaFqxIHFhmEgVmFsZGVtxIFyYSBpZWxhIDQ5LCBDZW50cmEgcmFqb25zLCBSxKtnYSwgTFYtMTAxMCwgTGV0b25pYQ!5e0!3m2!1ses-419!2sco!4v1741469170754!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.3751033676303!2d24.115637876490133!3d56.9595068984083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eecfced5176aa5%3A0x3e4fb4ef2fe4c072!2zS3JpxaFqxIHFhmEgVmFsZGVtxIFyYSBpZWxhIDQ5LCBDZW50cmEgcmFqb25zLCBSxKtnYSwgTFYtMTAxMCwgTGV0b25pYQ!5e0!3m2!1ses-419!2sco!4v1741469170754!5m2!1ses-419!2sco"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-  
+
     <div id="logos-patrocinadores">
       <!-- Imagen de los patrocinadores -->
       <img src="./assets/sponsors-cut.svg" alt="Patrocinadores">
     </div>
-  </div> 
+  </div>
 </footer>
 <script src="./script.js"></script> <!-- Enlaza el archivo JavaScript para funcionalidades adicionales -->
+
 </html>
