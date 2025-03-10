@@ -68,59 +68,98 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Function to show and close the popup (gallery images)
+// Función para mostrar y cerrar el popup (de la galería) //
+// Selecciona todas las imágenes dentro de los contenedores con las clases 'galeria-container' y 'galeria-characters'
 var galeria = document.querySelectorAll('.galeria-container img, .galeria-characters img');
+
+// Itera sobre cada imagen seleccionada
 galeria.forEach(image => {
+  // Agrega un evento 'onclick' a cada imagen, con una función de flecha como controlador de eventos
   image.onclick = () => {
+    // Cuando se hace clic en una imagen, muestra el popup estableciendo su estilo display a 'flex'
     document.querySelector('.popup').style.display = 'flex';
+    // Cambia la fuente de la imagen dentro del popup a la fuente de la imagen que se hizo clic
+    // es decir, la imagen que se hizo clic se muestra en el popup
     document.querySelector('.popup img').src = image.src;
+    // Deshabilita el desplazamiento de la página estableciendo overflow: hidden en el cuerpo del documento.
+    // esto permite que el usuario se enfoque en el popup sin poder desplazarse por la página
     document.body.style.overflow = 'hidden';
   }
 });
 
+// Selecciona el primer elemento con la clase 'close', que se espera sea el botón de cerrar del popup
 var close = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
+
+// Agrega un evento 'onclick' al botón de cerrar
 close.onclick = function() { 
+  // Cuando se hace clic en el botón de cerrar, oculta el popup estableciendo su estilo display a 'none'
   document.querySelector('.popup').style.display = "none";
+  // Restaura el desplazamiento de la página estableciendo overflow: '' (vacío) en el cuerpo del documento
   document.body.style.overflow = '';
 }
 
-
 // Carousel
 
+// Selecciona todos los elementos con la clase 'item' dentro del contenedor con la clase 'slider'
 let items = document.querySelectorAll('.slider .item');
-    let next = document.getElementById('next');
-    let prev = document.getElementById('prev');
-    
-    let active = 3;
-    function loadShow(){
-        let stt = 0;
-        items[active].style.transform = `none`;
-        items[active].style.zIndex = 1;
-        items[active].style.filter = 'none';
-        items[active].style.opacity = 1;
-        for(var i = active + 1; i < items.length; i++){
-            stt++;
-            items[i].style.transform = `translateX(${180*stt}px) scale(${1 - 0.3*stt}) perspective(16px) rotateY(-1deg)`;
-            items[i].style.zIndex = -stt;
-            items[i].style.filter = 'blur(5px)';
-            items[i].style.opacity = stt > 2 ? 0 : 0.6;
-        }
-        stt = 0;
-        for(var i = active - 1; i >= 0; i--){
-            stt++;
-            items[i].style.transform = `translateX(${-180*stt}px) scale(${1 - 0.3*stt}) perspective(16px) rotateY(1deg)`;
-            items[i].style.zIndex = -stt;
-            items[i].style.filter = 'blur(5px)';
-            items[i].style.opacity = stt > 2 ? 0 : 0.6;
-        }
+
+// Selecciona los botones de navegación 'next' y 'prev' por sus IDs
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+
+// Define el índice del elemento activo inicial en el carrusel
+let active = 3;
+
+// Función para cargar y mostrar los elementos del carrusel
+function loadShow(){
+    // Inicializa un contador para el estado de transformación
+    let stt = 0;
+
+    // Establece el estilo del elemento activo
+    items[active].style.transform = `none`;
+    items[active].style.zIndex = 1;
+    items[active].style.filter = 'none';
+    items[active].style.opacity = 1;
+
+    // Itera sobre los elementos después del activo
+    for(var i = active + 1; i < items.length; i++){
+        stt++;
+        // Aplica transformaciones para desplazar y escalar los elementos
+        items[i].style.transform = `translateX(${180*stt}px) scale(${1 - 0.3*stt}) perspective(16px) rotateY(-1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 2 ? 0 : 0.6;
     }
+
+    // Reinicia el contador
+    stt = 0;
+
+    // Itera sobre los elementos antes del activo
+    for(var i = active - 1; i >= 0; i--){
+        stt++;
+        // Aplica transformaciones para desplazar y escalar los elementos
+        items[i].style.transform = `translateX(${-180*stt}px) scale(${1 - 0.3*stt}) perspective(16px) rotateY(1deg)`;
+        items[i].style.zIndex = -stt;
+        items[i].style.filter = 'blur(5px)';
+        items[i].style.opacity = stt > 2 ? 0 : 0.6;
+    }
+}
+
+// Llama a la función para cargar y mostrar los elementos del carrusel
+loadShow();
+
+// Agrega un evento 'onclick' al botón 'next' para avanzar al siguiente elemento
+next.onclick = function(){
+    // Incrementa el índice del elemento activo si no es el último
+    active = active + 1 < items.length ? active + 1 : active;
+    // Vuelve a cargar y mostrar los elementos del carrusel
     loadShow();
-    next.onclick = function(){
-        active = active + 1 < items.length ? active + 1 : active;
-        loadShow();
-    }
-    prev.onclick = function(){
-        active = active - 1 >= 0 ? active - 1 : active;
-        loadShow();
-    }
+}
+
+// Agrega un evento 'onclick' al botón 'prev' para retroceder al elemento anterior
+prev.onclick = function(){
+    // Decrementa el índice del elemento activo si no es el primero
+    active = active - 1 >= 0 ? active - 1 : active;
+    // Vuelve a cargar y mostrar los elementos del carrusel
+    loadShow();
+}
