@@ -18,44 +18,51 @@ function hideLoader() {
   }, 500); /* El tiempo de espera de 500 ms coincide con la duración de la transición de opacidad definida en CSS para el loader */
 }
 
-// Navbar scroll
-let lastScrollTop = 0;
-const navbar = document.querySelector("nav");
-
-window.addEventListener("scroll", function () {
-  let scrollTop = window.scrollY;
-
-  if (scrollTop > lastScrollTop) {
-    // Si el usuario hace scroll hacia abajo, oculta el navbar
-    navbar.classList.add("hidden-nav");
-  } else {
-    // Si el usuario hace scroll hacia arriba, muestra el navbar
-    navbar.classList.remove("hidden-nav");
-  }
-
-  // Si está en la parte superior, asegúrate de mostrar el navbar
-  if (scrollTop === 0) {
-    navbar.classList.remove("hidden-nav");
-  }
-
-  lastScrollTop = scrollTop;
-});
-
-// Mostrar el navbar si el usuario pasa el cursor por la parte superior
-document.addEventListener("mousemove", function (event) {
-  if (event.clientY < 50) {
-    navbar.classList.remove("hidden-nav");
-  }
-});
-
 // Wait for the page to fully load
 window.onload = function () {
-    /* Al cargar la página, se deshabilita el desplazamiento estableciendo overflow: hidden en el cuerpo del documento. Esto asegura que el usuario no pueda interactuar con el contenido de la página mientras el loader está activo */
-  document.body.style.overflow = "hidden";
+  /* Al cargar la página, se deshabilita el desplazamiento estableciendo overflow: hidden en el cuerpo del documento. Esto asegura que el usuario no pueda interactuar con el contenido de la página mientras el loader está activo */
+document.body.style.overflow = "hidden";
 
-  /* Se programa la función hideLoader para que se ejecute después de 2 segundos (2000 ms). Este retraso simula una carga mínima, incluso si la página ya ha terminado de cargarse. */
-  setTimeout(hideLoader, 2000); // Initial delay (3000ms or 3 seconds)
+/* Se programa la función hideLoader para que se ejecute después de 2 segundos (2000 ms). Este retraso simula una carga mínima, incluso si la página ya ha terminado de cargarse. */
+setTimeout(hideLoader, 2000); // Initial delay (2000ms or 2 seconds)
 };
+
+// Navbar scroll
+const navbar = document.querySelector("nav");
+let hideTimeout;
+
+// Función para mostrar la navbar
+function showNavbar() {
+  navbar.style.top = "0"; // Muestra la navbar
+}
+
+// Función para ocultar la navbar
+function hideNavbar() {
+  if (window.scrollY > 0) { // Solo oculta si el usuario NO está en la parte superior
+    navbar.style.top = "-10rem"; // Mueve la navbar hacia arriba para ocultarla
+  }
+}
+
+// Detectar cuando el usuario está en la parte superior de la página
+window.addEventListener("scroll", () => {
+  if (window.scrollY === 0) {
+    showNavbar(); // Siempre visible si está en la parte superior
+  } else {
+    hideNavbar(); // Se oculta si baja
+  }
+});
+
+// Detectar cuando el usuario pasa el mouse por la parte superior de la pantalla
+document.addEventListener("mousemove", (event) => {
+  if (event.clientY < 50) { // Si el mouse está en la parte superior (50px desde arriba)
+    showNavbar();
+  }
+});
+
+// Ocultar la navbar después de 3 segundos de inactividad
+navbar.addEventListener("mouseleave", () => {
+  hideTimeout = setTimeout(hideNavbar, 3000);
+});
 
 window.addEventListener("scroll", () => {
   const nav = document.querySelector("nav"); // Selecciona la navbar

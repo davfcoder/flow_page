@@ -104,27 +104,22 @@ nav {
   position: fixed; /* Se mantiene fija en la parte superior */
   top: 0;
   left: 0;
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  width: 100vw; /* Ocupa todo el ancho de la pantalla */
   z-index: 100; /* Se coloca por encima del contenido */
   display: flex; /* Organiza los elementos en una fila */
   justify-content: space-between; /* Distribuye los elementos a los extremos */
   align-items: center; /* Alinea los elementos verticalmente */
-  padding: 1rem 2rem; /* Agrega espacio interno */
-  height: 10rem; /* Altura fija de la navbar */
-  transition: transform 0.3s ease-in-out;
+  padding: 2rem 0;
+  height: 14rem; /* Altura fija de la navbar */
+  transition: transform 0.5s ease-in-out;
 }
 
 nav .logo {
   display: flex; /* Utiliza flexbox para organizar los elementos del logo en una fila */
   align-items: center; /* Centra el logo verticalmente */
-  gap: 2rem; /* Espaciado entre elementos del logo */
-  padding-left: 2rem; /* Margen izquierdo */
-}
-
-.logo {
-  width: 10rem; /* Tamaño del logo */
-  height: 10rem;
-  padding: 1rem; /* Espaciado interno */
+  margin-left: 10rem; /* Margen izquierdo */
+  width: 12rem; /* Tamaño del logo */
+  height: 12rem;
 }
 
 .nav-links {
@@ -136,7 +131,7 @@ nav .logo {
 
 .nav-links a {
   /* Ajusta los estilos de los enlaces de la navbar */
-  margin-left: 1rem; /* Espacio a la izquierda de cada enlace */
+  margin-left: 2rem; /* Espacio a la izquierda de cada enlace */
   color: var(--color-white); /* Color del texto de los enlaces */
   text-decoration: none; /* Elimina el subrayado de los enlaces */
   display: flex; /* Utiliza flexbox para los enlaces */
@@ -196,7 +191,7 @@ nav .logo {
   padding: 0;
   transition: 0.5s;
   left: calc(50% - 250px);
-  top: 10%;
+  top: 5%;
 }
 
 .item img {
@@ -238,6 +233,10 @@ nav .logo {
 /* Sinopsis */
 .sinopsis {
   margin-top: 15rem; /* Espaciado superior */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
 .text-image {
@@ -245,17 +244,21 @@ nav .logo {
   justify-content: center; /* Alineación horizontal centrada */
   align-items: center; /* Alineación vertical centrada */
   padding: 0 15%; /* Espaciado interno horizontal */
+  gap: 20rem;
 }
 
 .degraded-image {
   border: none; /* Sin borde */
   width: 100%; /* Ancho completo */
+  height: 100%;
 }
 
 /* Imagen degradada */
 .degraded-image img {
   margin-top: 5rem; /* Espaciado superior */
-  width: 120%; /* Ancho de la imagen mayor al contenedor para crear un efecto de desbordamiento */
+  width: 100%; /* Ancho de la imagen mayor al contenedor para crear un efecto de desbordamiento */
+  height: auto; /* Altura automática para mantener la proporción de la imagen */
+  transform: scale(2.5); /* Aumenta el tamaño de la imagen */
   mask-image: radial-gradient(
     circle,
     black 0%,
@@ -270,14 +273,24 @@ nav .logo {
 }
 
 /* Texto de la sinopsis */
+
+/* Título de la sinopsis */
+.sinopsis-title {
+ text-align: left;
+ font-size: 3rem; /* Tamaño de la fuente */
+ font-weight: bold; /* Fuente en negrita */
+ color: var(--color-white); /* Color del texto */
+ padding-bottom: 5rem;
+}
+
 .sinopsis-text {
   color: var(--color-white); /* Color del texto */
   font-size: 20px; /* Tamaño de la fuente */
 }
 
-/* Títulos de la galería y sinopsis */
-.galeria-title,
-.sinopsis-title {
+/* Galería */
+/* Título de la galería*/
+.galeria-title {
   text-align: center; /* Alineación centrada del texto */
   font-size: 3rem; /* Tamaño de la fuente */
   font-weight: bold; /* Fuente en negrita */
