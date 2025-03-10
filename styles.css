@@ -111,7 +111,7 @@ nav {
   align-items: center; /* Alinea los elementos verticalmente */
   padding: 1rem 2rem; /* Agrega espacio interno */
   height: 10rem; /* Altura fija de la navbar */
-  background-color: var(--bg-black); /* Color de fondo definido en :root */
+  transition: transform 0.3s ease-in-out;
 }
 
 nav .logo {
@@ -166,44 +166,30 @@ nav .logo {
   transition: all 0.3s ease; /* Transición suave */
 }
 
-/* Efecto de transparencia al hacer scroll */
-nav.scrolled {
-  background-color: rgba(26, 30, 38, 0.95); /* Color con opacidad */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
-  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
-}
-
-/* Efecto de reducción de tamaño al hacer scroll */
-nav.scrolled .logo {
-  width: 10rem; /* Ancho reducido del logo */
-  height: 10rem; /* Altura reducida del logo */
-  transition: all 0.3s ease; /* Transición suave para cambios de estilo */
-}
-
-/* Efecto de reducción de tamaño al hacer scroll */
-nav.scrolled .nav-links a {
-  font-size: 1.8rem; /* Tamaño de fuente reducido */
-  padding: 0.8rem 1rem; /* Espaciado interno reducido */
+.hidden-nav {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Carrusel */
 
 .carousel-section {
   width: 100vw;
+  height: 100vh;
 }
 
 .slider {
   margin: 0 auto;
   position: relative;
-  width: 100%;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
 .item {
   position: absolute;
   width: 500px;
-  height: 850px;
+  height: 85vh;
   text-align: justify;
   background-color: #fff;
   border-radius: 1rem;

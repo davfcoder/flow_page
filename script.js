@@ -18,6 +18,36 @@ function hideLoader() {
   }, 500); /* El tiempo de espera de 500 ms coincide con la duración de la transición de opacidad definida en CSS para el loader */
 }
 
+// Navbar scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY;
+
+  if (scrollTop > lastScrollTop) {
+    // Si el usuario hace scroll hacia abajo, oculta el navbar
+    navbar.classList.add("hidden-nav");
+  } else {
+    // Si el usuario hace scroll hacia arriba, muestra el navbar
+    navbar.classList.remove("hidden-nav");
+  }
+
+  // Si está en la parte superior, asegúrate de mostrar el navbar
+  if (scrollTop === 0) {
+    navbar.classList.remove("hidden-nav");
+  }
+
+  lastScrollTop = scrollTop;
+});
+
+// Mostrar el navbar si el usuario pasa el cursor por la parte superior
+document.addEventListener("mousemove", function (event) {
+  if (event.clientY < 50) {
+    navbar.classList.remove("hidden-nav");
+  }
+});
+
 // Wait for the page to fully load
 window.onload = function () {
     /* Al cargar la página, se deshabilita el desplazamiento estableciendo overflow: hidden en el cuerpo del documento. Esto asegura que el usuario no pueda interactuar con el contenido de la página mientras el loader está activo */
