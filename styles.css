@@ -10,8 +10,9 @@
 @font-face {
   /* Definición de una fuente personalizada */
   font-family: "Toroka Wide"; /* Nombre de la fuente que se usará en CSS */
-  src: url("fonts/Toroka-WideLight.woff2") format("woff2"), /* Fuente en formato woff2 */
-    url("fonts/Toroka-WideLight.woff") format("woff"); /* Fuente en formato woff */
+  src: url("fonts/Toroka-WideLight.woff2") format("woff2"),
+    /* Fuente en formato woff2 */ url("fonts/Toroka-WideLight.woff")
+      format("woff"); /* Fuente en formato woff */
   font-weight: 300; /* Grosor ligero de la fuente */
   font-style: normal; /* Estilo normal (ni itálico ni negrita) */
   font-display: swap; /* Optimización: usa una fuente alternativa mientras carga */
@@ -62,7 +63,9 @@ html {
 
 body {
   padding-top: 12rem; /* Espacio superior para evitar que el contenido quede oculto por la navbar */
-  background-color: var(--bg-black); /* Aplica el color de fondo definido en :root */
+  background-color: var(
+    --bg-black
+  ); /* Aplica el color de fondo definido en :root */
   font-family: Toroka Wide; /* Usa la fuente personalizada definida anteriormente */
 }
 
@@ -81,7 +84,8 @@ body {
   transition: opacity 0.5s ease-in-out; /* Hace que desaparezca suavemente */
 }
 
-.loader-content { /* Contenedor del SVG */
+.loader-content {
+  /* Contenedor del SVG */
   position: relative; /* Establece la posición del contenedor como relativa, lo que permite posicionar elementos hijos de manera absoluta dentro de él */
   width: 100%; /* El ancho del contenedor será el 100% del ancho del elemento padre */
   height: 100%; /* La altura del contenedor será el 100% de la altura del elemento padre */
@@ -106,7 +110,7 @@ nav {
   justify-content: space-between; /* Distribuye los elementos a los extremos */
   align-items: center; /* Alinea los elementos verticalmente */
   padding: 1rem 2rem; /* Agrega espacio interno */
-  height: 12rem; /* Altura fija de la navbar */
+  height: 10rem; /* Altura fija de la navbar */
   background-color: var(--bg-black); /* Color de fondo definido en :root */
 }
 
@@ -184,60 +188,65 @@ nav.scrolled .nav-links a {
 
 /* Carrusel */
 
-.carrusel {
-  margin-top: 5rem; /* Espaciado superior */
-  margin-bottom: 8rem; /* Espaciado inferior */
+.carousel-section {
+  width: 100vw;
 }
 
-.carousel-container {
-  padding-top: 5rem; /* Espaciado superior interno */
-  margin-bottom: 1.5rem; /* Espaciado inferior */
-  position: relative; /* Posicionamiento relativo */
-  max-width: 25vw; /* Ancho máximo del contenedor */
-  height: 42vw; /* Altura del contenedor */
-  margin: auto; /* Centrado horizontal */
-  overflow: hidden; /* Oculta el contenido desbordado */
-  display: flex; /* Modelo de caja flexible */
-  align-items: center; /* Alineación vertical centrada */
-  justify-content: center; /* Alineación horizontal centrada */
-  border-radius: 1.5rem; /* Bordes redondeados */
-  box-shadow: 5px 5px 30px rgba(8, 9, 12, 0.569); /* Sombra para dar profundidad */
+.slider {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
 }
 
-/* Contenedor de imágenes en línea */
-.carousel {
-  display: flex; /* Modelo de caja flexible */
-  transition: transform 0.5s ease-in-out; /* Transición suave para cambios de estilo */
+.item {
+  position: absolute;
+  width: 500px;
+  height: 850px;
+  text-align: justify;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 0;
+  transition: 0.5s;
+  left: calc(50% - 250px);
+  top: 10%;
 }
 
-/* Estilos de las imágenes */
-.carousel img {
-  width: 100%; /* Ancho completo de la imagen */
-  border-radius: 1rem; /* Bordes redondeados */
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
-/* Botones de navegación */
 .prev,
 .next {
-  position: absolute; /* Posicionamiento absoluto */
-  top: 50%; /* Centrado vertical */
-  transform: translateY(-50%); /* Ajuste de posición vertical */
-  background-color: rgba(0, 0, 0, 0.411); /* Fondo semi-transparente */
-  color: white; /* Color del texto */
-  border: none; /* Sin borde */
-  padding: 10px; /* Espaciado interno */
-  cursor: pointer; /* Cursor de puntero */
-  width: 4rem; /* Ancho del botón */
-  height: 4rem; /* Altura del botón */
-  border-radius: 1rem; /* Bordes redondeados */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(193, 191, 191, 0.411);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
 }
 
 .prev {
-  left: 1rem; /* Posición a la izquierda */
+  left: calc(40rem);
 }
 
 .next {
-  right: 1rem; /* Posición a la derecha */
+  right: 40rem;
+}
+
+.prev:hover,
+.next:hover {
+  transform: translateY(-50%) scale(1.2);
 }
 
 /* Sinopsis */
@@ -261,8 +270,16 @@ nav.scrolled .nav-links a {
 .degraded-image img {
   margin-top: 5rem; /* Espaciado superior */
   width: 120%; /* Ancho de la imagen mayor al contenedor para crear un efecto de desbordamiento */
-  mask-image: radial-gradient(circle, black 0%, transparent 80%); /* Máscara radial para crear un efecto de degradado circular */
-  -webkit-mask-image: radial-gradient(circle, var(--bg-black) 10%, transparent 50%); /* Máscara radial para navegadores WebKit */
+  mask-image: radial-gradient(
+    circle,
+    black 0%,
+    transparent 80%
+  ); /* Máscara radial para crear un efecto de degradado circular */
+  -webkit-mask-image: radial-gradient(
+    circle,
+    var(--bg-black) 10%,
+    transparent 50%
+  ); /* Máscara radial para navegadores WebKit */
   filter: brightness(1.3) contrast(1.1); /* Ajuste de brillo y contraste para mejorar la visibilidad */
 }
 
@@ -273,7 +290,8 @@ nav.scrolled .nav-links a {
 }
 
 /* Títulos de la galería y sinopsis */
-.galeria-title, .sinopsis-title {
+.galeria-title,
+.sinopsis-title {
   text-align: center; /* Alineación centrada del texto */
   font-size: 3rem; /* Tamaño de la fuente */
   font-weight: bold; /* Fuente en negrita */
@@ -281,7 +299,8 @@ nav.scrolled .nav-links a {
 }
 
 /* Contenedor de la galería */
-.galeria-container, .galeria-characters {
+.galeria-container,
+.galeria-characters {
   display: flex; /* Modelo de caja flexible */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center; /* Alineación centrada de los elementos */
@@ -334,14 +353,22 @@ nav.scrolled .nav-links a {
 
 /* Animación de zoom para navegadores WebKit */
 @-webkit-keyframes zoom {
-  from {-webkit-transform: scale(0);} /* Escala inicial */
-  to {-webkit-transform: scale(1);} /* Escala final */
+  from {
+    -webkit-transform: scale(0);
+  } /* Escala inicial */
+  to {
+    -webkit-transform: scale(1);
+  } /* Escala final */
 }
 
 /* Animación de zoom */
 @keyframes zoom {
-  from {transform: scale(0);} /* Escala inicial */
-  to {transform: scale(1);} /* Escala final */
+  from {
+    transform: scale(0);
+  } /* Escala inicial */
+  to {
+    transform: scale(1);
+  } /* Escala final */
 }
 
 /* Botón de cierre del popup */
@@ -354,7 +381,8 @@ nav.scrolled .nav-links a {
 }
 
 /* Efecto hover en el botón de cierre */
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
   color: var(--color-secondary); /* Color del texto al hacer hover */
 }
@@ -398,7 +426,8 @@ p {
 }
 
 /* Estilo de los campos de entrada y área de texto */
-input, textarea {
+input,
+textarea {
   width: 100%; /* Ancho completo */
   padding: 10px; /* Espaciado interno */
   margin: 5px 0 20px 0; /* Espaciado externo */
