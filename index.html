@@ -57,7 +57,7 @@
       <li><a href="#sinopsis">Sinopsis</a></li> <!-- Enlace a la sección "Sinopsis" -->
       <li><a href="#galeria">Escenas</a></li> <!-- Enlace a la sección "Galeria" -->
       <li><a href="#characters">Personajes</a></li> <!-- Enlace a la sección "Formulario" -->
-      <li><a href="#titulo-form">Formulario</a></li> <!-- Enlace a la sección "Formulario" -->
+      <li><a href="#form">Formulario</a></li> <!-- Enlace a la sección "Formulario" -->
     </ul>
   </nav>
 
@@ -131,45 +131,50 @@
   </div>
 
   <!-- formulario -->
-  <section class="container-form" id="form">
-    <p id="titulo-form">Formulario de contacto</p>
-    <!-- Contenedor de información -->
-    <div class="info-container">
-      <h2>ENVÍANOS UN MENSAJE</h2>
-      <p>Si tienes alguna inquietud o comentario sobre nuestra película, por favor escríbenos y responderemos a la mayor
-        brevedad posible.</p>
-    </div>
-
-    <!-- Contenedor del formulario -->
+  <section id="form" class="form">
+    <p class="titulo-form">Formulario de contacto</p>
     <div class="form-container">
-      <h2>Contáctanos</h2>
-      <form action="#" method="dialog">
-        <!-- Campo para el nombre -->
-        <label for="nombre">Nombre *</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <!-- Campo para el correo electrónico -->
-        <label for="correo">Correo Electrónico *</label>
-        <input type="email" id="correo" name="correo" required>
-
-        <!-- Campo para el teléfono -->
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}"
-          title="Ingresa un número de teléfono válido">
-
-        <!-- Campo para el mensaje -->
-        <label for="mensaje">Mensaje *</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-        <!-- Campo para aceptar las políticas de tratamiento de datos -->
-        <div class="checkbox-container">
-          <input type="checkbox" id="politicas" name="politicas" required>
-          <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label>
+      <div class="form-box">
+        <!-- Contenedor de información -->
+        <div class="info-container">
+          <h2>ENVÍANOS UN MENSAJE</h2>
+          <p>Si tienes alguna inquietud o comentario sobre nuestra película, por favor escríbenos y responderemos a la
+            mayor
+            brevedad posible.</p>
         </div>
 
-        <!-- Botón para enviar el formulario -->
-        <button type="submit">Enviar Mensaje</button>
-      </form>
+        <!-- Contenedor del formulario -->
+        <div class="form-fields">
+          <h2>Contáctanos</h2>
+          <form action="#" method="dialog">
+            <!-- Campo para el nombre -->
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <!-- Campo para el correo electrónico -->
+            <label for="correo">Correo Electrónico *</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <!-- Campo para el teléfono -->
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}"
+              title="Ingresa un número de teléfono válido">
+
+            <!-- Campo para el mensaje -->
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <!-- Campo para aceptar las políticas de tratamiento de datos -->
+            <div class="checkbox-container">
+              <input type="checkbox" id="politicas" name="politicas" required>
+              <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label>
+            </div>
+
+            <!-- Botón para enviar el formulario -->
+            <button type="submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 

@@ -127,7 +127,7 @@ nav .logo {
   /* Ajusta la ubicación de los enlaces */
   list-style: none; /* Elimina los puntos de la lista */
   display: flex; /* Utiliza el modelo de caja flexible para organizar los enlaces en una fila */
-  padding-right: 3rem; /* Agrega un espacio de 3rem a la derecha de los enlaces */
+  padding-right: 8rem; /* Agrega un espacio de 3rem a la derecha de los enlaces */
 }
 
 .nav-links a {
@@ -414,28 +414,38 @@ nav .logo {
   color: var(--color-secondary); /* Color del texto al hacer hover */
 }
 
-#titulo-form {
+/* Formulario */
+.form {
+  width: 100vw;
+  height: 100vh;
+}
+
+.titulo-form {
   text-align: center; /* Alineación centrada */
   font-size: 3rem; /* Tamaño de la fuente */
   font-weight: bold; /* Fuente en negrita */
   color: var(--color-white); /* Color del texto */
-  margin-top: 20rem;
+  padding-top: 20rem;
+  padding-bottom: 8rem;
+}
+
+.form-container {
+  display: flex;
 }
 
 /* Contenedor del formulario */
-.container-form {
+.form-box {
   display: flex; /* Modelo de caja flexible */
   background: rgb(217, 168, 108); /* Color de fondo */
   padding: 25px; /* Espaciado interno */
   width: 70%; /* Ancho del contenedor */
   border-radius: 20px; /* Bordes redondeados */
   margin: 0 auto; /* Centrado horizontal */
-  margin-top: 5rem; /* Espaciado superior */
-  margin-bottom: 25rem; /* Espaciado inferior */
+  padding: 5rem 0;
 }
 
 /* Contenedor del formulario */
-.form-container {
+.form-fields {
   flex: 1; /* Ocupa el mismo espacio que el contenedor de información */
   padding-right: 20px; /* Espaciado interno a la derecha */
 }
