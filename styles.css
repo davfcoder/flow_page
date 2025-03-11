@@ -83,12 +83,12 @@ nav {
   position: fixed; /* Se mantiene fija en la parte superior */
   top: 0; /* Se alinea con la parte superior de la ventana del navegador */
   left: 0; /* Se alinea con el borde izquierdo de la pantalla */
-  width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  z-index: 10; /* Se coloca por encima del contenido */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 100; /* Se coloca por encima del contenido */
   display: flex; /* Organiza los elementos en una fila */
   justify-content: space-between; /* Distribuye los elementos a los extremos */
   align-items: center; /* Alinea los elementos verticalmente */
-  padding: 2rem 0; /* Agrega un espacio vertical de 2 rem arriba y abajo */
+  padding: 1rem 2rem; /* Agrega un espacio vertical de 2 rem arriba y abajo */
   height: 10rem; /* Altura fija de la navbar */
   transition: transform 0.5s ease-in-out; /* Aplica una animación suave a los cambios en la transformación */
   background-color: var(--bg-black);/* Aplica el color de fondo definido */
