@@ -57,13 +57,12 @@
       <li><a href="#sinopsis">Sinopsis</a></li> <!-- Enlace a la sección "Sinopsis" -->
       <li><a href="#galeria">Escenas</a></li> <!-- Enlace a la sección "Galeria" -->
       <li><a href="#characters">Personajes</a></li> <!-- Enlace a la sección "Formulario" -->
-      <li><a href="#form">Formulario</a></li> <!-- Enlace a la sección "Formulario" -->
+      <li><a href="#titulo-form">Formulario</a></li> <!-- Enlace a la sección "Formulario" -->
     </ul>
   </nav>
 
   <!-- Sección "Carrusel" -->
-  <section class="carousel-section" id="carrusel">
-    <div class="slider">
+    <div class="slider" id="carrusel">
       <div class="item">
         <img src="./assets/Flow_1.png" alt="Flow_1" />
       </div>
@@ -85,26 +84,23 @@
       <button class="next" id="next">&#10095;</button> <!-- Botón para avanzar a la siguiente imagen del carrusel, con un ícono de flecha derecha -->
       <button class="prev" id="prev">&#10094;</button> <!-- Botón para retroceder a la imagen anterior del carrusel, con un ícono de flecha izquierda -->
     </div>
-  </section>
 
   <!-- Sección "Sinopsis" -->
-  <section class="sinopsis" id="sinopsis">
-    <div class="text-image">
+  <div class="sinopsis" id="sinopsis">
+    <p class="sinopsis-title">Sinopsis</p>
+    <div class="text-image">  
       <div class="degraded-image">
         <img src="./assets/flow-pasto.jpg" alt="">
-      </div>
+      </div>  
       <div>
-        <p class="sinopsis-title">Sinopsis</p>
-        <p class="sinopsis-text"> Cat es un animal solitario, pero debido a que su hogar fue devastado por una gran
-          inundación, encuentra refugio en una barca poblada por diversas especies, y tendrá que unirse con ellos a
-          pesar de sus diferencias.</p>
+        <p class="sinopsis-text">El gato es un animal solitario, pero cuando su hogar es devastado por 
+          una gran inundación, encuentra refugio en un barco habitado por varias especies y tendrá que trabajar 
+          en equipo con ellas a pesar de sus diferencias.</p>
       </div>
     </div>
-  </section>
-
+  </div>
   <!-- Sección "Galeria" -->
-  <section id="galeria">
-    <div>
+    <div id="galeria">
       <p class="galeria-title">Escenas</p> <!-- Título de la galería de escenas -->
       <div class="galeria-container">
         <div class="image"><img src="./assets/F_02-min.jpg" alt="Flow Movie 1"></div> <!-- Imagen de la escena 1 -->
@@ -112,17 +108,13 @@
         <div class="image"><img src="./assets/F_04-min.jpg" alt="Flow Movie 3"></div> <!-- Imagen de la escena 3 -->
         <div class="image"><img src="./assets/F_05-min.jpg" alt="Flow Movie 4"></div> <!-- Imagen de la escena 4 -->
       </div>
+      <p class="characters-title" id="characters">Personajes</p> <!-- Título de la galería de personajes -->
+      <div class="galeria-characters">
+        <div class="image"><img src="./characters/Bird.png" alt="Flow Movie 11"></div> <!-- Imagen del personaje 1 -->
+        <div class="image"><img src="./characters/Dog.png" alt="Flow Movie 12"></div> <!-- Imagen del personaje 2 -->
+        <div class="image"><img src="./characters/Lemur.png" alt="Flow Movie 13"></div> <!-- Imagen del personaje 3 -->
+      </div>
     </div>
-  </section>
-
-  <section class="characters" id="characters">
-    <p class="characters-title">Personajes</p> <!-- Título de la galería de personajes -->
-    <div class="galeria-characters">
-      <div class="image"><img src="./characters/Bird.png" alt="Flow Movie 11"></div> <!-- Imagen del personaje 1 -->
-      <div class="image"><img src="./characters/Dog.png" alt="Flow Movie 12"></div> <!-- Imagen del personaje 2 -->
-      <div class="image"><img src="./characters/Lemur.png" alt="Flow Movie 13"></div> <!-- Imagen del personaje 3 -->
-    </div>
-  </section>
 
   <!-- Contenedor para un popup -->
   <div class="popup" id="popup">
@@ -131,10 +123,8 @@
   </div>
 
   <!-- formulario -->
-  <section id="form" class="form">
-    <p class="titulo-form">Formulario de contacto</p>
+    <p id="titulo-form">Formulario de contacto</p>
     <div class="form-container">
-      <div class="form-box">
         <!-- Contenedor de información -->
         <div class="info-container">
           <h2>ENVÍANOS UN MENSAJE</h2>
@@ -149,16 +139,15 @@
           <form action="#" method="dialog">
             <!-- Campo para el nombre -->
             <label for="nombre">Nombre *</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Ingresa solo letras" required>
 
             <!-- Campo para el correo electrónico -->
             <label for="correo">Correo Electrónico *</label>
-            <input type="email" id="correo" name="correo" required>
+            <input type="email" id="correo" name="correo" title="Ingrese un correo válido (ejemplo@dominio.com)" required>
 
             <!-- Campo para el teléfono -->
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}"
-              title="Ingresa un número de teléfono válido">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido" required>
 
             <!-- Campo para el mensaje -->
             <label for="mensaje">Mensaje *</label>
@@ -174,12 +163,10 @@
             <button type="submit">Enviar Mensaje</button>
           </form>
         </div>
-      </div>
     </div>
-  </section>
 
+<footer>
   <!-- Pie de página -->
-<section id="footer">
   <div class="div-footer">
     <div class="info-redes">
       <div class="redes">
@@ -222,7 +209,6 @@
           </svg>
         </a>
       </div>
-
       <!-- Enlace a Dream Well Studio -->
       <a href="https://www.dreamwell.lv/">
         <p>DREAM WELL STUDIO</p>
@@ -249,15 +235,14 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-  </div>
 
     <div class="logos-patrocinadores">
       <!-- Imagen de los patrocinadores -->
       <img src="./assets/sponsors-cut.svg" alt="Patrocinadores">
     </div>
-  </section>
+  </div>
 </body>
-
+</footer>
 
 <script src="./script.js"></script> <!-- Enlaza el archivo JavaScript para funcionalidades adicionales -->
 

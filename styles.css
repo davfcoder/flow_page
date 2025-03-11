@@ -35,28 +35,6 @@
   box-sizing: border-box; /* Asegura que padding y border no aumenten el tamaño de los elementos */
 }
 
-/* Personalización de la barra de desplazamiento en navegadores WebKit */
-::-webkit-scrollbar {
-  width: 10px; /* Define el ancho de la barra de desplazamiento */
-}
-
-/* Estilo del track (fondo de la barra de desplazamiento) */
-::-webkit-scrollbar-track {
-  background: white; /* Color del fondo de la barra de desplazamiento */
-  border-radius: 5px; /* Bordes redondeados para un mejor diseño */
-}
-
-/* Estilo del thumb (barra de desplazamiento) */
-::-webkit-scrollbar-thumb {
-  background: var(--color-secondary); /* Color de la barra móvil */
-  border-radius: 5px; /* Bordes redondeados para un diseño moderno */
-  transition: background 0.3s ease; /* Transición suave al cambiar de color */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-tertiary); /* Cambio de color al pasar el mouse */
-}
-
 html {
   font-size: 10px; /* Define la base de la unidad rem (1rem = 10px) */
   padding-top: 12rem; /* Mueve el contenido hacia abajo sin afectar el scroll */
@@ -64,7 +42,7 @@ html {
 }
 
 body {
-  background-color: var(
+background-color: var(
     --bg-black
   ); /* Aplica el color de fondo definido en :root */
   font-family: Toroka Wide; /* Usa la fuente personalizada definida anteriormente */
@@ -122,7 +100,6 @@ nav .logo {
   align-items: center; /* Centra el logo verticalmente */
   margin-left: 10rem; /* Margen izquierdo */
   width: 10rem; /* Tamaño del logo */
-  height: 10vh; /* Define la altura del logo como el 10% de la altura de la ventana del navegador */
 }
 
 .nav-links {
@@ -165,12 +142,6 @@ nav .logo {
 }
 
 /* Carrusel */
-
-.carousel-section {
-  width: 100vw; /* La sección del carrusel ocupa todo el ancho de la ventana del navegador */
-  height: 90vh; /* La altura del carrusel es el 90% de la altura de la ventana */
-}
-
 .slider {
   margin: 0 auto; /* Centra el slider horizontalmente */
   position: relative; /* Permite posicionar los elementos dentro del slider de manera absoluta */
@@ -182,7 +153,7 @@ nav .logo {
 .item {
   position: absolute; /* Permite posicionar cada elemento del carrusel en relación con el slider */
   width: 25vw; /* Cada ítem ocupa el 25% del ancho de la ventana */
-  height: 65vh; /* La altura de cada ítem es el 65% de la altura de la ventana */
+  height: 75vh; /* La altura de cada ítem es el 65% de la altura de la ventana */
   text-align: justify; /* Alinea el texto justificado dentro del elemento (si lo tuviera) */
   background-color: #fff; /* Fondo blanco para cada ítem */
   border-radius: 1rem; /* Bordes redondeados para un diseño más suave */
@@ -216,11 +187,11 @@ nav .logo {
 }
 
 .prev {
-  left: calc(40rem); /* Posiciona el botón "anterior" hacia la izquierda */
+  left: calc(28%); /* Posiciona el botón "anterior" hacia la izquierda */
 }
 
 .next {
-  right: 40rem; /* Posiciona el botón "siguiente" hacia la derecha */
+  right: 28%; /* Posiciona el botón "siguiente" hacia la derecha */
 }
 
 .prev:hover,
@@ -229,11 +200,10 @@ nav .logo {
 }
 
 /* Sinopsis */
-.sinopsis {
-  height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-  width: 100vw; /* Ocupa el 100% del ancho de la ventana */
-  display: flex; /* Usa flexbox para organizar los elementos internos */
-  align-items: center; /* Centra los elementos verticalmente */
+.sinopsis, #galeria {
+  padding-top: 15rem;
+  margin-top: 12rem; /* Espacio superior de 5rem para separación */
+  margin-bottom: 15rem;
 }
 
 .text-image {
@@ -241,21 +211,18 @@ nav .logo {
   justify-content: center; /* Centra los elementos horizontalmente */
   align-items: center; /* Centra los elementos verticalmente */
   padding: 0 15%; /* Agrega espacio a los lados para mantener el contenido alineado */
-  gap: 20rem; /* Espacio entre los elementos */
 }
 
 .degraded-image {
   border: none; /* Elimina cualquier borde */
   width: 100%; /* La imagen ocupa todo el ancho disponible */
-  height: 100%; /* La imagen ocupa toda la altura disponible */
 }
 
 /* Imagen degradada */
 .degraded-image img {
   margin-top: 5rem; /* Espaciado superior */
   width: 100%; /* Ancho de la imagen mayor al contenedor para crear un efecto de desbordamiento */
-  height: auto; /* Altura automática para mantener la proporción de la imagen */
-  transform: scale(2.5); /* Aumenta el tamaño de la imagen */
+  transform: scale(1.5); /* Aumenta el tamaño de la imagen */
   mask-image: radial-gradient(
     circle,
     black 0%,
@@ -270,42 +237,18 @@ nav .logo {
 }
 
 /* Texto de la sinopsis */
-
-/* Título de la sinopsis */
-.sinopsis-title {
- text-align: left;
- font-size: 3rem; /* Tamaño de la fuente */
- font-weight: bold; /* Fuente en negrita */
- color: var(--color-white); /* Color del texto */
- padding-bottom: 5rem; /* Agrega un espacio inferior para separación */
-}
-
 .sinopsis-text {
   color: var(--color-white); /* Define el color del texto usando una variable CSS */
   font-size: 20px; /* Establece el tamaño de la fuente en 20 píxeles */
 }
 
-/* Galería */
-.galeria {
-  width: 100vw; /* La galería ocupa todo el ancho de la ventana del navegador */
-  height: 100vh; /* La galería ocupa toda la altura de la ventana del navegador */
-}
-
-
-/* Título de la galería*/
-.galeria-title {
+/* Formato del Título de la galería y de la sinopsis*/
+.galeria-title, .sinopsis-title {
   text-align: center; /* Centra el texto horizontalmente */
   font-size: 3rem; /* Establece un tamaño de fuente grande */
   font-weight: bold; /* Aplica negrita al texto */
   color: var(--color-white); /* Usa una variable CSS para definir el color del texto */
-  padding-top: 12rem; /* Agrega un espacio superior para separación */
-  padding-bottom: 5rem; /* Agrega un espacio inferior para separación */
-}
-
-/* Contenedor de la galería */
-.galeria-container {
-  margin-top: 5rem; /* Espacio superior de 5rem para separación */
-  margin-bottom: 10rem; /* Espacio inferior de 10rem para separación */
+  padding-bottom: 3rem; /* Agrega un espacio inferior para separación */
 }
 
 .galeria-container,
@@ -327,18 +270,9 @@ nav .logo {
   transition: transform 0.3s; /* Transición suave para el efecto de transformación */
 }
 
-.characters {
-  width: 100vw; /* La sección de personajes ocupa todo el ancho de la ventana del navegador */
-  height: 100vh; /* La sección de personajes ocupa toda la altura de la ventana del navegador */
-}
-
-.galeria-characters {
-  margin-top: 5rem; /* Agrega un margen superior de 5rem para separación */
-}
-
 .galeria-characters .image {
   width: 25%; /* Ancho de las imágenes */
-  margin: 5rem auto;
+  margin: 0rem auto;
 }
 
 .characters-title {
@@ -347,7 +281,7 @@ nav .logo {
   font-weight: bold; /* Fuente en negrita */
   color: var(--color-white); /* Color del texto */
   padding-top: 15rem; /* Agrega un espacio superior de 15rem para separación */
-  padding-bottom: 5rem; /* Agrega un espacio inferior de 5rem para separación */
+  padding-bottom: 3rem; /* Agrega un espacio inferior de 5rem para separación */
 }
 
 
@@ -420,30 +354,20 @@ nav .logo {
 }
 
 /* Formulario */
-.form {
-  width: 100vw; /* La sección del formulario ocupa todo el ancho de la ventana del navegador */
-  height: 100vh; /* La sección del formulario ocupa toda la altura de la ventana del navegador */
-}
 
-.titulo-form {
+#titulo-form {
   text-align: center; /* Alineación centrada */
   font-size: 3rem; /* Tamaño de la fuente */
   font-weight: bold; /* Fuente en negrita */
   color: var(--color-white); /* Color del texto */
-  padding-top: 20rem; /* Agrega un espacio superior de 20rem para separación */
-  padding-bottom: 8rem; /* Agrega un espacio inferior de 8rem para separación */
+  padding-top: 15rem;
+  margin-bottom: 5rem; /* Espaciado inferior */
 }
 
 .form-container {
   display: flex; /* Usa flexbox para organizar los elementos dentro del contenedor */
-}
-
-/* Contenedor del formulario */
-.form-box {
-  display: flex; /* Modelo de caja flexible */
   background: rgb(217, 168, 108); /* Color de fondo */
   gap: 3rem; /* Espaciado entre los elementos internos */
-  padding: 25px; /* Espaciado interno */
   width: 70%; /* Ancho del contenedor */
   border-radius: 20px; /* Bordes redondeados */
   margin: 0 auto; /* Centrado horizontal */
@@ -503,7 +427,7 @@ input[type="checkbox"] {
 
 /* Estilo del texto del checkbox */
 .checkboxtext {
-  margin-top: -15px; /* Ajuste de margen superior */
+  transform: translateY(-10px);
   font-size: 110%; /* Tamaño de la fuente */
   display: inline; /* Muestra en línea */
 }
@@ -536,17 +460,16 @@ footer {
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center; /* Alineación centrada */
   align-items: center; /* Alineación vertical centrada */
-  height: 85vh; /* Establece una altura del 85% de la ventana del navegador */
-  padding: 10rem 8rem; /* Espaciado interno */
+  padding:0; /* Espaciado interno */
   background: rgba(31, 30, 64, 0.686); /* Color de fondo semi-transparente */
 }
 
 /* Información de redes sociales */
 .info-redes {
+  padding-top: 5rem; /* Espaciado superior */
   color: var(--color-white); /* Color del texto */
   margin: auto; /* Centrado horizontal */
   width: 25%; /* Ancho del contenedor */
-  padding-left: 5rem; /* Agrega un espaciado interno a la izquierda */
 }
 
 /* Estilo de los enlaces de redes sociales */
@@ -555,32 +478,31 @@ footer {
   text-decoration: none; /* Sin subrayado */
 }
 
-/* Estilo de los enlaces de redes sociales */
-.redes {
-  padding-top: 2rem; /* Espaciado superior */
-  padding-bottom: 2rem; /* Agrega un espaciado inferior */
+/* Efecto hover en los enlaces */
+.info-redes a:hover { 
+  color: var(--color-tertiary); /* Color del texto */
 }
 
+/* Estilo de los iconos de redes sociales */
 .redes a {
-  padding-right: 1rem; /* Espaciado a la derecha */
+  padding-right: 15px; /* Espaciado a la derecha */
   text-decoration: none; /* Sin subrayado */
 }
 
 /* Información de los autores */
 .autores {
+  padding-top: 5rem; /* Espaciado superior */
   color: var(--color-white); /* Color del texto */
   margin: 0 auto; /* Centrado horizontal */
   width: 30%; /* Ancho del contenedor */
-  padding-left: 5rem; /* Agrega un espaciado interno a la izquierda */
+  padding-left: 2rem; /* Agrega un espaciado interno a la izquierda */
 }
 
 /* Contenedor del mapa */
 .mapa {
-  padding-top: 20px; /* Espaciado superior */
+  padding-top: 5rem; /* Espaciado superior */
   margin: auto; /* Centrado horizontal */
-  flex: 1.5; /* Permite que el elemento crezca en relación con otros elementos flexibles */
   width: 30%; /* Ancho del contenedor */
-  height: 40%; /* Define una altura del 40% del contenedor padre */
   display: flex; /* Modelo de caja flexible */
 }
 
@@ -599,23 +521,10 @@ footer {
   display: flex; /* Modelo de caja flexible */
   justify-content: center; /* Alineación centrada */
   align-items: center; /* Alineación vertical centrada */
-  padding: 4rem 1rem; /* Espaciado superior */
+  padding: 20px 0 0; /* Espaciado superior */
 }
 
 /* Estilo de las imágenes de los logos de patrocinadores */
 .logos-patrocinadores img {
   width: 100%; /* Ancho completo */
-  max-height: 10rem; /* Limita la altura máxima para mantener proporciones adecuadas */
-}
-
-/* Scroll por secciones */
-html, body {
-  scroll-snap-type: y mandatory; /* Aplica desplazamiento con "snap" en el eje Y, obligatorio */
-  overflow-y: scroll; /* Habilita el desplazamiento vertical */
-  height: 100vh; /* Define la altura total como la del viewport */
-}
-
-section {
-  height: 100vh; /* Cada sección ocupa la altura completa de la pantalla */
-  scroll-snap-align: start; /* Alinea cada sección al inicio al hacer scroll */
 }
