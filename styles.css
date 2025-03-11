@@ -38,7 +38,6 @@
 html {
   font-size: 10px; /* Define la base de la unidad rem (1rem = 10px) */
   padding-top: 12rem; /* Mueve el contenido hacia abajo sin afectar el scroll */
-  overflow-y: auto; /* Asegura que el scroll funcione correctamente */
 }
 
 body {
@@ -145,7 +144,7 @@ nav .logo {
 .slider {
   margin: 0 auto; /* Centra el slider horizontalmente */
   position: relative; /* Permite posicionar los elementos dentro del slider de manera absoluta */
-  width: 100vw; /* El slider ocupa todo el ancho de la ventana */
+  width: 100%; /* El slider ocupa todo el ancho de la ventana */
   height: 80vh; /* Define la altura del slider como el 80% de la ventana */
   overflow: visible; /* Permite que los elementos se extiendan fuera de los límites del contenedor */
 }
@@ -301,7 +300,7 @@ nav .logo {
   width: 100%; /* Ancho completo de la pantalla */
   height: 100%; /* Altura completa de la pantalla */
   background: rgb(0, 0, 0, 0.85); /* Fondo semi-transparente */
-  z-index: 100; /* Se asegura de estar por encima de otros elementos */
+  z-index: 1000; /* Se asegura de estar por encima de otros elementos */
 }
 
 /* Imagen dentro del popup */
@@ -340,8 +339,8 @@ nav .logo {
 /* Botón de cierre del popup */
 .popup span {
   position: absolute; /* Posicionamiento absoluto */
-  top: 0;
-  right: 1vw; /* Distancia desde el borde derecho */
+  top: 3rem;
+  right: 3rem; /* Distancia desde el borde derecho */
   font-size: 35px; /* Tamaño de la fuente */
   color: var(--color-white); /* Color del texto */
 }
@@ -453,15 +452,15 @@ button:hover {
 
 footer {
   margin-top: 15rem; /* Agrega un margen superior para separar el footer del contenido anterior */
+  background: rgba(31, 30, 64, 0.686); /* Color de fondo semi-transparente */
 }
 
 .div-footer {
+  width: 100%; /* Ancho completo */
   display: flex; /* Modelo de caja flexible */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center; /* Alineación centrada */
   align-items: center; /* Alineación vertical centrada */
-  padding:0; /* Espaciado interno */
-  background: rgba(31, 30, 64, 0.686); /* Color de fondo semi-transparente */
 }
 
 /* Información de redes sociales */
@@ -494,7 +493,7 @@ footer {
   padding-top: 5rem; /* Espaciado superior */
   color: var(--color-white); /* Color del texto */
   margin: 0 auto; /* Centrado horizontal */
-  width: 30%; /* Ancho del contenedor */
+  width: 25%; /* Ancho del contenedor */
   padding-left: 2rem; /* Agrega un espaciado interno a la izquierda */
 }
 
@@ -502,7 +501,7 @@ footer {
 .mapa {
   padding-top: 5rem; /* Espaciado superior */
   margin: auto; /* Centrado horizontal */
-  width: 30%; /* Ancho del contenedor */
+  width: 25%; /* Ancho del contenedor */
   display: flex; /* Modelo de caja flexible */
 }
 

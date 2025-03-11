@@ -100,21 +100,21 @@
     </div>
   </div>
   <!-- Sección "Galeria" -->
-    <div id="galeria">
-      <p class="galeria-title">Escenas</p> <!-- Título de la galería de escenas -->
-      <div class="galeria-container">
-        <div class="image"><img src="./assets/F_02-min.jpg" alt="Flow Movie 1"></div> <!-- Imagen de la escena 1 -->
-        <div class="image"><img src="./assets/F_03-min.jpg" alt="Flow Movie 2"></div> <!-- Imagen de la escena 2 -->
-        <div class="image"><img src="./assets/F_04-min.jpg" alt="Flow Movie 3"></div> <!-- Imagen de la escena 3 -->
-        <div class="image"><img src="./assets/F_05-min.jpg" alt="Flow Movie 4"></div> <!-- Imagen de la escena 4 -->
-      </div>
-      <p class="characters-title" id="characters">Personajes</p> <!-- Título de la galería de personajes -->
-      <div class="galeria-characters">
-        <div class="image"><img src="./characters/Bird.png" alt="Flow Movie 11"></div> <!-- Imagen del personaje 1 -->
-        <div class="image"><img src="./characters/Dog.png" alt="Flow Movie 12"></div> <!-- Imagen del personaje 2 -->
-        <div class="image"><img src="./characters/Lemur.png" alt="Flow Movie 13"></div> <!-- Imagen del personaje 3 -->
-      </div>
+  <div id="galeria">
+    <p class="galeria-title">Escenas</p> <!-- Título de la galería de escenas -->
+    <div class="galeria-container">
+      <div class="image"><img src="./assets/F_02-min.jpg" alt="Flow Movie 1"></div> <!-- Imagen de la escena 1 -->
+      <div class="image"><img src="./assets/F_03-min.jpg" alt="Flow Movie 2"></div> <!-- Imagen de la escena 2 -->
+      <div class="image"><img src="./assets/F_04-min.jpg" alt="Flow Movie 3"></div> <!-- Imagen de la escena 3 -->
+      <div class="image"><img src="./assets/F_05-min.jpg" alt="Flow Movie 4"></div> <!-- Imagen de la escena 4 -->
     </div>
+    <p class="characters-title" id="characters">Personajes</p> <!-- Título de la galería de personajes -->
+    <div class="galeria-characters">
+      <div class="image"><img src="./characters/Bird.png" alt="Flow Movie 11"></div> <!-- Imagen del personaje 1 -->
+      <div class="image"><img src="./characters/Dog.png" alt="Flow Movie 12"></div> <!-- Imagen del personaje 2 -->
+      <div class="image"><img src="./characters/Lemur.png" alt="Flow Movie 13"></div> <!-- Imagen del personaje 3 -->
+    </div>
+  </div>
 
   <!-- Contenedor para un popup -->
   <div class="popup" id="popup">
@@ -123,48 +123,47 @@
   </div>
 
   <!-- formulario -->
-    <p id="titulo-form">Formulario de contacto</p>
-    <div class="form-container">
-        <!-- Contenedor de información -->
-        <div class="info-container">
-          <h2>ENVÍANOS UN MENSAJE</h2>
-          <p>Si tienes alguna inquietud o comentario sobre nuestra película, por favor escríbenos y responderemos a la
-            mayor
-            brevedad posible.</p>
-        </div>
-
-        <!-- Contenedor del formulario -->
-        <div class="form-fields">
-          <h2>Contáctanos</h2>
-          <form action="#" method="dialog">
-            <!-- Campo para el nombre -->
-            <label for="nombre">Nombre *</label>
-            <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Ingresa solo letras" required>
-
-            <!-- Campo para el correo electrónico -->
-            <label for="correo">Correo Electrónico *</label>
-            <input type="email" id="correo" name="correo" title="Ingrese un correo válido (ejemplo@dominio.com)" required>
-
-            <!-- Campo para el teléfono -->
-            <label for="telefono">Teléfono *</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido" required>
-
-            <!-- Campo para el mensaje -->
-            <label for="mensaje">Mensaje *</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-            <!-- Campo para aceptar las políticas de tratamiento de datos -->
-            <div class="checkbox-container">  <!-- Contenedor para la casilla de verificación y su etiqueta -->
-              <input type="checkbox" id="politicas" name="politicas" required> <!-- Casilla de verificación obligatoria para aceptar las políticas -->
-              <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label> <!-- Etiqueta de la casilla de verificación -->
-            </div>
-
-            <!-- Botón para enviar el formulario -->
-            <button type="submit">Enviar Mensaje</button>
-          </form>
-        </div>
+  <p id="titulo-form">Formulario de contacto</p>
+  <div class="form-container">
+      <!-- Contenedor de información -->
+    <div class="info-container">
+      <h2>ENVÍANOS UN MENSAJE</h2>
+      <p>Si tienes alguna inquietud o comentario sobre nuestra película, por favor escríbenos y responderemos a la mayor brevedad posible.</p>
     </div>
+
+    <!-- Contenedor del formulario -->
+    <div class="form-fields">
+      <h2>Contáctanos</h2>
+      <form action="#" method="dialog">
+        <!-- Campo para el nombre -->
+        <label for="nombre">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Ingresa solo letras" required>
+
+        <!-- Campo para el correo electrónico -->
+        <label for="correo">Correo Electrónico *</label>
+        <input type="email" id="correo" name="correo" title="Ingrese un correo válido (ejemplo@dominio.com)" required>
+
+        <!-- Campo para el teléfono -->
+        <label for="telefono">Teléfono *</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" title="Ingresa un número de teléfono válido" required>
+
+        <!-- Campo para el mensaje -->
+        <label for="mensaje">Mensaje *</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <!-- Campo para aceptar las políticas de tratamiento de datos -->
+        <div class="checkbox-container">  <!-- Contenedor para la casilla de verificación y su etiqueta -->
+          <input type="checkbox" id="politicas" name="politicas" required> <!-- Casilla de verificación obligatoria para aceptar las políticas -->
+          <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label> <!-- Etiqueta de la casilla de verificación -->
+        </div>
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </div>
 </body>
+
 <footer>
   <!-- Pie de página -->
   <div class="div-footer">
