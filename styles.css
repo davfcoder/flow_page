@@ -59,10 +59,11 @@
 
 html {
   font-size: 10px; /* Define la base de la unidad rem (1rem = 10px) */
+  padding-top: 12rem; /* Mueve el contenido hacia abajo sin afectar el scroll */
+  overflow-y: auto; /* Asegura que el scroll funcione correctamente */
 }
 
 body {
-  padding-top: 12rem; /* Espacio superior para evitar que el contenido quede oculto por la navbar */
   background-color: var(
     --bg-black
   ); /* Aplica el color de fondo definido en :root */
@@ -105,7 +106,7 @@ nav {
   top: 0;
   left: 0;
   width: 100vw; /* Ocupa todo el ancho de la pantalla */
-  z-index: 100; /* Se coloca por encima del contenido */
+  z-index: 10; /* Se coloca por encima del contenido */
   display: flex; /* Organiza los elementos en una fila */
   justify-content: space-between; /* Distribuye los elementos a los extremos */
   align-items: center; /* Alinea los elementos verticalmente */
@@ -187,7 +188,7 @@ nav .logo {
   padding: 0;
   transition: 0.5s;
   left: calc(50% - 12.5vw);
-  top: 24%;
+  top: 18%;
 }
 
 .item img {
@@ -600,6 +601,7 @@ footer {
 /* Estilo de las imágenes de los logos de patrocinadores */
 .logos-patrocinadores img {
   width: 100%; /* Ancho completo */
+  max-height: 10rem;
 }
 
 /* Scroll por secciones */
