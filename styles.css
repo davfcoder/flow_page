@@ -174,7 +174,7 @@ nav .logo {
   position: relative;
   width: 100vw;
   height: 80vh;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .item {
@@ -187,7 +187,7 @@ nav .logo {
   padding: 0;
   transition: 0.5s;
   left: calc(50% - 12.5vw);
-  top: 16%;
+  top: 24%;
 }
 
 .item img {
@@ -200,7 +200,7 @@ nav .logo {
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+  top: 64%;
   transform: translateY(-50%);
   background-color: rgba(193, 191, 191, 0.411);
   color: white;
@@ -331,6 +331,10 @@ nav .logo {
   height: 100vh;
 }
 
+.galeria-characters {
+  margin-top: 5rem;
+}
+
 .galeria-characters .image {
   width: 25%; /* Ancho de las imágenes */
   margin: 5rem auto;
@@ -437,6 +441,7 @@ nav .logo {
 .form-box {
   display: flex; /* Modelo de caja flexible */
   background: rgb(217, 168, 108); /* Color de fondo */
+  gap: 3rem;
   padding: 25px; /* Espaciado interno */
   width: 70%; /* Ancho del contenedor */
   border-radius: 20px; /* Bordes redondeados */
@@ -446,14 +451,15 @@ nav .logo {
 
 /* Contenedor del formulario */
 .form-fields {
-  flex: 1; /* Ocupa el mismo espacio que el contenedor de información */
-  padding-right: 20px; /* Espaciado interno a la derecha */
+  flex: 1.5; /* Ocupa 1.5 veces mas espacio que el texto lateral */
+  padding: 0 4rem; /* Espaciado interno */
 }
 
 /* Contenedor de información */
 .info-container {
   flex: 1; /* Ocupa el mismo espacio que el contenedor del formulario */
-  padding-left: 20px; /* Espaciado interno a la izquierda */
+  margin-left: 4rem; /* Espaciado a la izquierda */
+  padding-left: 2rem; /* Espaciado interno a la izquierda */
   border-left: 2px solid var(--bg-black); /* Borde izquierdo */
   display: flex; /* Modelo de caja flexible */
   flex-direction: column; /* Dirección de los elementos en columna */
@@ -519,17 +525,22 @@ button:hover {
 }
 
 /* Contenedor del pie de página */
-#div-footer {
-  background: rgba(31, 30, 64, 0.686); /* Color de fondo semi-transparente */
+
+footer {
+  margin-top: 15rem;
+}
+
+.div-footer {
   display: flex; /* Modelo de caja flexible */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center; /* Alineación centrada */
   align-items: center; /* Alineación vertical centrada */
-  padding: 1rem; /* Espaciado interno */
+  padding: 10rem 2rem; /* Espaciado interno */
+  background: rgba(31, 30, 64, 0.686); /* Color de fondo semi-transparente */
 }
 
 /* Información de redes sociales */
-#info-redes {
+.info-redes {
   padding-top: 20px; /* Espaciado superior */
   color: var(--color-white); /* Color del texto */
   margin: auto; /* Centrado horizontal */
@@ -537,27 +548,31 @@ button:hover {
 }
 
 /* Estilo de los enlaces de redes sociales */
-#info-redes a {
+.info-redes a {
   color: var(--color-white); /* Color del texto */
   text-decoration: none; /* Sin subrayado */
 }
 
 /* Estilo de los enlaces de redes sociales */
-#redes a {
+.redes {
+  padding-top: 2rem; /* Espaciado superior */
+  padding-bottom: 2rem;
+}
+
+.redes a {
   padding-right: 10px; /* Espaciado a la derecha */
   text-decoration: none; /* Sin subrayado */
 }
 
 /* Información de los autores */
-#autores {
-  padding-top: 20px; /* Espaciado superior */
+.autores {
   color: var(--color-white); /* Color del texto */
   margin: 0 auto; /* Centrado horizontal */
   width: 30%; /* Ancho del contenedor */
 }
 
 /* Contenedor del mapa */
-#mapa {
+.mapa {
   padding-top: 20px; /* Espaciado superior */
   margin: auto; /* Centrado horizontal */
   width: 30%; /* Ancho del contenedor */
@@ -565,7 +580,7 @@ button:hover {
 }
 
 /* Ajuste del iframe dentro del contenedor */
-#mapa iframe {
+.mapa iframe {
   width: 100%; /* Ancho completo */
   height: 100%; /* Altura completa */
   border: none; /* Sin borde */
@@ -574,15 +589,27 @@ button:hover {
 }
 
 /* Contenedor de logos de patrocinadores */
-#logos-patrocinadores {
+.logos-patrocinadores {
   width: 100%; /* Ancho completo */
   display: flex; /* Modelo de caja flexible */
   justify-content: center; /* Alineación centrada */
   align-items: center; /* Alineación vertical centrada */
-  padding: 20px 0 0; /* Espaciado superior */
+  padding: 2rem 1rem; /* Espaciado superior */
 }
 
 /* Estilo de las imágenes de los logos de patrocinadores */
-#logos-patrocinadores img {
+.logos-patrocinadores img {
   width: 100%; /* Ancho completo */
+}
+
+/* Scroll por secciones */
+html, body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
 }
