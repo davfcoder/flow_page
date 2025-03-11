@@ -536,16 +536,17 @@ footer {
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center; /* Alineación centrada */
   align-items: center; /* Alineación vertical centrada */
-  padding: 10rem 2rem; /* Espaciado interno */
+  height: 85vh;
+  padding: 10rem 8rem; /* Espaciado interno */
   background: rgba(31, 30, 64, 0.686); /* Color de fondo semi-transparente */
 }
 
 /* Información de redes sociales */
 .info-redes {
-  padding-top: 20px; /* Espaciado superior */
   color: var(--color-white); /* Color del texto */
   margin: auto; /* Centrado horizontal */
   width: 25%; /* Ancho del contenedor */
+  padding-left: 5rem;
 }
 
 /* Estilo de los enlaces de redes sociales */
@@ -561,7 +562,7 @@ footer {
 }
 
 .redes a {
-  padding-right: 10px; /* Espaciado a la derecha */
+  padding-right: 1rem; /* Espaciado a la derecha */
   text-decoration: none; /* Sin subrayado */
 }
 
@@ -570,13 +571,16 @@ footer {
   color: var(--color-white); /* Color del texto */
   margin: 0 auto; /* Centrado horizontal */
   width: 30%; /* Ancho del contenedor */
+  padding-left: 5rem;
 }
 
 /* Contenedor del mapa */
 .mapa {
   padding-top: 20px; /* Espaciado superior */
   margin: auto; /* Centrado horizontal */
+  flex: 1.5;
   width: 30%; /* Ancho del contenedor */
+  height: 40%;
   display: flex; /* Modelo de caja flexible */
 }
 
@@ -595,7 +599,7 @@ footer {
   display: flex; /* Modelo de caja flexible */
   justify-content: center; /* Alineación centrada */
   align-items: center; /* Alineación vertical centrada */
-  padding: 2rem 1rem; /* Espaciado superior */
+  padding: 4rem 1rem; /* Espaciado superior */
 }
 
 /* Estilo de las imágenes de los logos de patrocinadores */
