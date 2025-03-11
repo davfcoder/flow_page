@@ -17,7 +17,7 @@
     <div class="loader-content">
       <!-- Gráfico SVG para la animación del cargador -->
       <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.03 7.76">
-        <defs>
+        <defs> <!-- Definición de estilos y otros elementos reutilizables dentro del SVG -->
           <style>
             .cls-1,
             .cls-2 {
@@ -82,8 +82,8 @@
       <div class="item">
         <img src="./assets/Flow_6.png" alt="Flow_6" />
       </div>
-      <button class="next" id="next">&#10095;</button>
-      <button class="prev" id="prev">&#10094;</button>
+      <button class="next" id="next">&#10095;</button> <!-- Botón para avanzar a la siguiente imagen del carrusel, con un ícono de flecha derecha -->
+      <button class="prev" id="prev">&#10094;</button> <!-- Botón para retroceder a la imagen anterior del carrusel, con un ícono de flecha izquierda -->
     </div>
   </section>
 
@@ -165,9 +165,9 @@
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
             <!-- Campo para aceptar las políticas de tratamiento de datos -->
-            <div class="checkbox-container">
-              <input type="checkbox" id="politicas" name="politicas" required>
-              <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label>
+            <div class="checkbox-container">  <!-- Contenedor para la casilla de verificación y su etiqueta -->
+              <input type="checkbox" id="politicas" name="politicas" required> <!-- Casilla de verificación obligatoria para aceptar las políticas -->
+              <label class="checkboxtext">Acepto las políticas de tratamiento de datos *</label> <!-- Etiqueta de la casilla de verificación -->
             </div>
 
             <!-- Botón para enviar el formulario -->
