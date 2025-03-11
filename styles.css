@@ -112,6 +112,7 @@ nav {
   padding: 2rem 0;
   height: 10rem; /* Altura fija de la navbar */
   transition: transform 0.5s ease-in-out;
+  background-color: var(--bg-black);
 }
 
 nav .logo {
@@ -119,7 +120,7 @@ nav .logo {
   align-items: center; /* Centra el logo verticalmente */
   margin-left: 10rem; /* Margen izquierdo */
   width: 10rem; /* Tamaño del logo */
-  height: 10rem;
+  height: 10vh;
 }
 
 .nav-links {
@@ -165,7 +166,7 @@ nav .logo {
 
 .carousel-section {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
 }
 
 .slider {
@@ -227,7 +228,6 @@ nav .logo {
 
 /* Sinopsis */
 .sinopsis {
-  margin-top: 15rem; /* Espaciado superior */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -287,7 +287,6 @@ nav .logo {
 .galeria {
   width: 100vw;
   height: 100vh;
-  margin-top: 15rem
  }
 
 
@@ -297,23 +296,28 @@ nav .logo {
   font-size: 3rem; /* Tamaño de la fuente */
   font-weight: bold; /* Fuente en negrita */
   color: var(--color-white); /* Color del texto */
+  padding-top: 15rem;
+  padding-bottom: 5rem;
 }
 
 /* Contenedor de la galería */
+
+.galeria-container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
 
 .galeria-container,
 .galeria-characters {
   display: flex; /* Modelo de caja flexible */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center; /* Alineación centrada de los elementos */
-  margin-top: 10rem; /* Espaciado superior */
-  margin-bottom: 10rem; /* Espaciado inferior */
 }
 
 /* Estilo de las imágenes */
 .image {
   width: 35%; /* Ancho de las imágenes */
-  padding: 0.5rem; /* Espaciado interno */
+  padding: 0.8rem; /* Espaciado interno */
 }
 
 .image img {
@@ -322,13 +326,29 @@ nav .logo {
   transition: transform 0.3s; /* Transición suave para el efecto de transformación */
 }
 
-.galeria-characters .image {
-  width: 20%; /* Ancho de las imágenes */
-  margin-top: -5rem;
+.characters {
+  width: 100vw;
+  height: 100vh;
 }
 
+.galeria-characters .image {
+  width: 25%; /* Ancho de las imágenes */
+  margin: 5rem auto;
+}
+
+.characters-title {
+  text-align: center; /* Alineación centrada del texto */
+  font-size: 3rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Fuente en negrita */
+  color: var(--color-white); /* Color del texto */
+  padding-top: 15rem;
+  padding-bottom: 5rem;
+}
+
+
 /* Efecto hover en las imágenes de la galería */
-#galeria img:hover {
+.galeria-container img:hover,
+.galeria-characters img:hover {
   transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el mouse */
   cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
 }
