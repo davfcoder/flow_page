@@ -45,6 +45,7 @@ background-color: var(
     --bg-black
   ); /* Aplica el color de fondo definido en :root */
   font-family: Toroka Wide; /* Usa la fuente personalizada definida anteriormente */
+  width: 100%;
 }
 
 /* Loader de carga */
@@ -198,8 +199,17 @@ nav .logo {
   transform: translateY(-50%) scale(1.2); /* Agranda el botón al hacer hover */
 }
 
+
 /* Sinopsis */
-.sinopsis, #galeria {
+.sinopsis {
+  width: 100%;
+  background-image: url(./assets/Flow_54.jpg);
+  background-position: center; /* Centra la imagen */
+  padding: 30rem 0 30rem 0;
+  margin: 30rem 0 2rem 0;
+}
+
+#galeria {
   padding-top: 15rem;
   margin-top: 12rem; /* Espacio superior de 5rem para separación */
   margin-bottom: 15rem;
@@ -239,6 +249,7 @@ nav .logo {
 .sinopsis-text {
   color: var(--color-white); /* Define el color del texto usando una variable CSS */
   font-size: 20px; /* Establece el tamaño de la fuente en 20 píxeles */
+  text-shadow: 2px 2px 4px var(--bg-black );
 }
 
 /* Formato del Título de la galería y de la sinopsis*/
@@ -250,8 +261,12 @@ nav .logo {
   padding-bottom: 3rem; /* Agrega un espacio inferior para separación */
 }
 
-.galeria-container,
-.galeria-characters {
+.sinopsis-title, .sinopsis-text {
+  text-shadow: 2px 2px 2px var(--bg-black);
+}
+
+
+.galeria-container, .galeria-characters {
   display: flex; /* Modelo de caja flexible */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan */
   justify-content: center; /* Alineación centrada de los elementos */
