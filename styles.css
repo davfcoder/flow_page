@@ -152,14 +152,14 @@ nav .logo {
 
 .item {
   position: absolute; /* Permite posicionar cada elemento del carrusel en relación con el slider */
-  width: 25vw; /* Cada ítem ocupa el 25% del ancho de la ventana */
+  width: 25%; /* Cada ítem ocupa el 25% del ancho de la ventana */
   height: 75vh; /* La altura de cada ítem es el 65% de la altura de la ventana */
   text-align: justify; /* Alinea el texto justificado dentro del elemento (si lo tuviera) */
   background-color: #fff; /* Fondo blanco para cada ítem */
   border-radius: 1rem; /* Bordes redondeados para un diseño más suave */
   padding: 0; /* No agrega relleno interno */
   transition: 0.5s; /* Transición suave de 0.5 segundos en los cambios de estado */
-  left: calc(50% - 12.5vw); /* Centra el ítem en el carrusel */
+  left: calc(50% - 12.5%); /* Centra el ítem en el carrusel */
   top: 18%; /* Posiciona los ítems un poco más abajo dentro del slider */
 }
 
