@@ -205,6 +205,7 @@ nav .logo {
   width: 100%;
   background-image: url(./assets/Flow_54.jpg);
   background-position: center; /* Centra la imagen */
+  background-attachment: fixed;
   padding: 30rem 0 30rem 0;
   margin: 30rem 0 2rem 0;
 }
